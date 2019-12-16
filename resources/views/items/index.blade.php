@@ -12,15 +12,36 @@
     <span class="mainpage-header-logo__text">お気に入りの写真を投稿しよう！</span>
   </h1>
    <nav class="mainpage-header__nav">
-     <ul class="mainpage-header__nav-ul">
-      <li class="mainpage-header__nav-ul-list">
-        <a class="mainpage-header__nav-ul-list-link" href="#">
-          <i class="fas fa-camera"></i> 
+     <div class="mainpage-header__nav-wrapper">
+       <div class="mainpage-header__nav-wrapper-text">
+          <a href="#" > 
+          <i class="fas fa-camera"></i>
           写真を見る
-        </a>
-     </li>  
-     </ul>   
-    </nav> 
+          </a>
+       </div>
+       <div class="mainpage-header__nav-wrapper-text">
+        　<a href="#" > 
+          <i class="fas fa-upload"></i>
+          投稿する
+          </a>
+       </div> 
+       <form class="mainpage-header__nav-wrapper-form" method="get" >
+        <input class="mainpage-header__nav-wrapper-form-search" type="text" name="search" placeholder="キーワードを入力"> 
+        <button class="mainpage-header__nav-wrapper-form-btn">
+            <i class="fas fa-search"></i>
+            検索      
+        </button>  
+       </form>
+     </div>
+     <div class="mainpage-header__nav-right-wrapper" >
+       <div class="mainpage-header__nav-right-wrapper-login" >
+         <a href="#">
+         　　ログイン
+         </a>
+
+    </div>  
+     </div>  
+  </nav> 
 </header>
 
 

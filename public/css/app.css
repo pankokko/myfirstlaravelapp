@@ -6099,23 +6099,46 @@ legend {
 
 .mainpage-header__nav {
   background: #333;
+}
+
+.mainpage-header__nav-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
   position: relative;
 }
 
-.mainpage-header__nav-ul {
-  list-style: none;
+.mainpage-header__nav-wrapper-text {
+  margin-left: 15px;
+  padding: 8px;
 }
 
-.mainpage-header__nav-ul-list-link {
-  padding: 10px 15px;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
+.mainpage-header__nav-wrapper-form-search {
+  background: white;
+  border-radius: 10px;
+  border: none;
+  width: 250px;
+  height: 30px;
+  padding: 10px;
 }
 
-.fa-camera {
-  padding-left: 5px;
+.mainpage-header__nav-wrapper-form-btn {
+  background: #666;
+  border: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  padding: 5px 8px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.mainpage-header__nav-wrapper a {
+  color: white;
+}
+
+.mainpage-header__nav .mainpage-header__nav-wrapper-form-btn:hover {
+  background-color: rgba(238, 238, 238, 0.5);
 }
 
 /*!
