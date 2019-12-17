@@ -6099,6 +6099,10 @@ legend {
 
 .mainpage-header__nav {
   background: #333;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .mainpage-header__nav-wrapper {
@@ -6110,7 +6114,7 @@ legend {
 }
 
 .mainpage-header__nav-wrapper-text {
-  margin-left: 15px;
+  margin-left: 10px;
   padding: 8px;
 }
 
@@ -6137,7 +6141,43 @@ legend {
   color: white;
 }
 
-.mainpage-header__nav .mainpage-header__nav-wrapper-form-btn:hover {
+.mainpage-header__nav-right-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.mainpage-header__nav-right-wrapper a {
+  color: white;
+}
+
+.mainpage-header__nav-right-wrapper p {
+  padding: 6 6 12 6;
+}
+
+.mainpage-header__nav-right-wrapper div {
+  border-radius: 4px;
+  width: 70px;
+  height: 50%;
+  text-align: center;
+}
+
+.mainpage-header__nav-right-wrapper-login {
+  background: #666;
+  margin-right: 10px;
+}
+
+.mainpage-header__nav-right-wrapper-login-text {
+  margin: auto;
+}
+
+.mainpage-header__nav-right-wrapper-signup {
+  background: #6cb2eb;
+  margin-right: 40px;
+}
+
+.mainpage-header__nav-wrapper-form-btn:hover {
   background-color: rgba(238, 238, 238, 0.5);
 }
 

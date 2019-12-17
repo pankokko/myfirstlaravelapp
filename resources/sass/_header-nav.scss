@@ -1,11 +1,13 @@
 .mainpage-header__nav{
   background:#333;
+  display:flex;
+  justify-content: space-between;
     &-wrapper{
       display: flex;
       align-items: center;
       position: relative;
         &-text{
-          margin-left:15px;
+          margin-left:10px;
           padding:8px;
         }
         &-form{
@@ -18,7 +20,7 @@
             padding:10px;
           }
           &-btn{
-            background:#666;
+            background:$gray;
             border:none;  
             transition:all 0.1s;
             padding:5px 8px;
@@ -29,8 +31,38 @@
         a{
           color:white;
         }
+     }   
+ }
+
+ .mainpage-header__nav-right-wrapper{
+   display:flex;
+   align-items:center;
+     a{
+        color:white;
      }
-     .mainpage-header__nav-wrapper-form-btn:hover{
-      background-color:rgba(#eee,0.5);
+     p{
+      padding:6 6 12 6 ; 
      }
+     div{
+       border-radius:4px;
+       width:70px;
+       height:50%;
+       text-align:center;
+     }
+     &-login{
+       background:$gray;
+       margin-right:10px;
+        &-text{
+          margin:auto;
+        }
+     }
+    &-signup{
+      background:$cyan;
+      margin-right:40px;
+    } 
+ }
+
+
+ .mainpage-header__nav-wrapper-form-btn:hover{
+  background-color:rgba(#eee,0.5);
  }

@@ -1,7 +1,6 @@
 <html>
 <head>
     <link rel="stylesheet" href="/css/app.css"> 
-
 <title>Home/index</title>
 </head>
 <body>
@@ -36,14 +35,16 @@
      <div class="mainpage-header__nav-right-wrapper" >
        <div class="mainpage-header__nav-right-wrapper-login" >
          <a href="#">
-         　　ログイン
+         <p class="mainpage-header__nav-right-wrapper-login-text" >ログイン</p>
+        </a>
+    　　</div>  
+       <div class="mainpage-header__nav-right-wrapper-signup" >
+         <a href="#">
+           <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
          </a>
-
-    </div>  
+    　　</div>  
      </div>  
   </nav> 
 </header>
-
-
 </body>
 </html>
