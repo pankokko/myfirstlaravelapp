@@ -1,0 +1,10 @@
+.pictures-wrapper{
+  width:1000px;
+  background:blue;
+  margin: 30px auto;
+  &_photo{
+    a{
+      text-align:center;
+    }
+  }
+}

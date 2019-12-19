@@ -6192,6 +6192,16 @@ h1 {
   background-color: rgba(238, 238, 238, 0.5);
 }
 
+.pictures-wrapper {
+  width: 1000px;
+  background: blue;
+  margin: 30px auto;
+}
+
+.pictures-wrapper_photo a {
+  text-align: center;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
