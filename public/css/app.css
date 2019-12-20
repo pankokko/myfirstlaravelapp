@@ -6202,6 +6202,40 @@ h1 {
   text-align: center;
 }
 
+.top-nav {
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.top-nav-wrapper {
+  width: 97%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.top-nav-wrapper-list {
+  margin: 0 30px;
+  width: 260px;
+  padding: 20px;
+  background: #f1f1f1;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-align: center;
+}
+
+.top-nav-wrapper-list-link {
+  font-size: 22px;
+  font-weight: bold;
+  color: #666;
+}
+
+.top-nav-wrapper-list:hover {
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
