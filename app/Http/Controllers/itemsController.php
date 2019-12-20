@@ -10,4 +10,8 @@ class itemsController extends Controller
   {
      return view("items/index");
   }
+
+  public function new(Request $request){
+    return view("items/new");
+  }
 }

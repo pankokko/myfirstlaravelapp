@@ -6202,6 +6202,20 @@ h1 {
   text-align: center;
 }
 
+.top-pictures {
+  width: 99%;
+  margin: 5px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  flex-wrap: wrap;
+}
+
+.top-pictures-wrapper {
+  margin: 3px;
+}
+
 .top-nav {
   width: 100%;
   background: #f1f1f1;
@@ -6234,6 +6248,90 @@ h1 {
 
 .top-nav-wrapper-list:hover {
   background-color: rgba(102, 102, 102, 0.5);
+}
+
+footer {
+  margin-top: 35px;
+  background: #6cb2eb;
+}
+
+footer .pagetop {
+  background: #666;
+}
+
+footer .pagetop-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+footer .pagetop-link-page-top {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  color: black;
+}
+
+.copy {
+  background: #6cb2eb;
+  width: 100%;
+}
+
+.copy-right {
+  width: 200px;
+  margin-left: 85%;
+  background: #6cb2eb;
+}
+
+.upload-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.upload-wrapper-bar {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 20px auto;
+  border: solid 1px #333;
+  border-radius: 2px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.upload-wrapper-bar-each {
+  padding: 10px;
+  width: 33.4%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.upload-wrapper-text {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.upload-wrapper-form {
+  border: solid 1px black;
+  padding: 20px;
+}
+
+.upload-wrapper-form-content-label {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  background: #39c;
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
 }
 
 /*!

@@ -12,3 +12,4 @@
 */
 
 Route::get('/', "itemsController@index");
+Route::get("items/new","itemsController@new");

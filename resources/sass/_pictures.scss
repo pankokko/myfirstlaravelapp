@@ -8,3 +8,14 @@
     }
   }
 }
+
+.top-pictures{
+  width:99%;
+  margin:5px auto;
+  display:flex;
+  justify-content:row;
+  flex-wrap:wrap;
+    &-wrapper{
+      margin:3px;
+    }
+}

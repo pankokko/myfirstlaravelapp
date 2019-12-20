@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/app.css"> 
-<title>Home/index</title>
+<title>@yield("title")</title>
 </head>
 <body>
 <header class="mainpage-header">
@@ -49,6 +49,21 @@
 </header>
 <main>
   @yield('content')
-<main>
+</main>
+<footer>
+    <div class="pagetop">
+      <a href="#" class="pagetop-link">
+        <span class="pagetop-link-page-top">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+          PAGE TOP
+        </span>
+      </a>  
+    </div>
+    <div class="copy">
+      <div class="copy-right">
+        Copyright © pankokko
+      </div>
+    </div>  
+  </footer>
 </body>
 </html>
