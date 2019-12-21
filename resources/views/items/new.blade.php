@@ -16,11 +16,15 @@
     <form class="upload-wrapper-form" method="post" aciton="/items/create">
       <div class="upload-wrapper-form-content">
         <p class="upload-wrapper-form-content-text">投稿する写真を選択してください</p>
-        <input type="hidden" name="type" id="uploadType" value="default">
+        <input type="hidden" name="fake" id="uploadType" value="default">
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
-          <input type="file" style="display:none;">
+          <input id="file_input" type="file" class="image-input" name="image">
         </label>
+      </div>
+      <div class="btns">
+        <input class="btns-upload-btn" type="button" value="キャンセル">
+        <input class="btns-upload-btn" type="button" value="実行">
       </div>
     </form>
   </div>  

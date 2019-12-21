@@ -20,7 +20,7 @@
           </a>
        </div>
        <div class="mainpage-header__nav-wrapper-text">
-        　<a href="#" > 
+        　<a href="items/new" > 
           <i class="fas fa-upload"></i>
           投稿する
           </a>
@@ -38,12 +38,12 @@
          <a href="#">
          <p class="mainpage-header__nav-right-wrapper-login-text" >ログイン</p>
         </a>
-    　　</div>  
+       </div>  
        <div class="mainpage-header__nav-right-wrapper-signup" >
          <a href="#">
            <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
          </a>
-    　　</div>  
+       </div>  
      </div>  
   </nav> 
 </header>
