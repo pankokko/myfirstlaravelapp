@@ -18,11 +18,9 @@ class itemsController extends Controller
   }
 
   public function create(Request $request){
-
-    $item = new Item;
-    $form = $request->all();
-    unset($form['_token']);
-    $item->fill($form)->save();
+    $imagefile = $request->file('path');
+    $temp_path = $imagefile->store('public/temp');
+    // eval(\Psy\sh());
     return redirect('/');
   }
 }

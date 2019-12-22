@@ -13,14 +13,14 @@
       <i class="fas fa-upload"></i>
       写真を投稿する
     </h2>
-    <form class="upload-wrapper-form" method="post" aciton="/items/create" >
+    <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
         <p class="upload-wrapper-form-content-text">投稿する写真を選択してください</p>
         {{-- <input type="hidden" name="fake" id="uploadType" value="default"> --}}
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
-          <input id="file_input" type="file" class="image-input" name="image">
+          <input id="file_input" type="file" class="image-input" name="path">
         </label>
       </div>
       <div class="btns">
