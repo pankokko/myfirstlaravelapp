@@ -21,11 +21,13 @@
     </div>
   </div>
   <div class="top-pictures">
+    @foreach ($items as $item)
     <div class="top-pictures-wrapper"> 
       <a  class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00060.JPG')}}"width="350" height="220px">
+        <img class="top-pictures-wrapper-picture" src="{{asset('images/'. $item->image)}}"width="350" height="220px">
       </a>
     </div>
+    @endforeach
     <div class="top-pictures-wrapper"> 
       <a  class="top-pictures-wrapper-link" href="#">
         <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00032.JPG')}}"width="350" height="220px">
@@ -50,6 +52,6 @@
       <a class="top-pictures-wrapper-link" href="#">
         <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00111.JPG')}}"width="350" height="220px">
       </a>
-    </div>
+    </div> 
   </div>
 @endsection
