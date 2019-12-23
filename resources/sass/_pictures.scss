@@ -1,0 +1,20 @@
+.pictures-wrapper{
+  width:1000px;
+  background:blue;
+  margin: 30px auto;
+  &_photo{
+    a{
+      text-align:center;
+    }
+  }
+}
+
+.top-pictures{
+  margin:5px auto;
+  display:flex;
+  justify-content:row;
+  flex-wrap:wrap;
+    &-wrapper{
+      margin:3px;
+    }
+}

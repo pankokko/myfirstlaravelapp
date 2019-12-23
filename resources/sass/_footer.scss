@@ -1,0 +1,27 @@
+footer{
+  margin-top:35px;
+  background:$cyan;
+    .pagetop{
+      background:$gray;
+      &-link{
+        width:100%;
+        text-decoration:none;
+        &-page-top{
+        width:180px;
+        margin:0 auto;
+        display:block;  
+        color: black;     
+        }
+      }
+    }
+}
+
+.copy{
+background:$cyan;
+width:100%;
+&-right{
+  width:200px;
+  margin-left:85%;
+  background:$cyan;
+}
+}
