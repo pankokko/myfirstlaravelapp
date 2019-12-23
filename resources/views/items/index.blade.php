@@ -24,34 +24,9 @@
     @foreach ($items as $item)
     <div class="top-pictures-wrapper"> 
       <a  class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/'. $item->image)}}"width="350" height="220px">
+        <img class="top-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$item->path)}}"width="350" height="220px">
       </a>
     </div>
     @endforeach
-    <div class="top-pictures-wrapper"> 
-      <a  class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00032.JPG')}}"width="350" height="220px">
-      </a>
-    </div>
-    <div class="top-pictures-wrapper"> 
-      <a class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00102.JPG')}}"width="350" height="220px">
-      </a>
-    </div>
-    <div class="top-pictures-wrapper"> 
-      <a class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00044.JPG')}}"width="350" height="220px">
-      </a>
-    </div>
-    <div class="top-pictures-wrapper"> 
-      <a class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00192.JPG')}}"width="350" height="220px">
-      </a>
-    </div>
-    <div class="top-pictures-wrapper"> 
-      <a class="top-pictures-wrapper-link" href="#">
-        <img class="top-pictures-wrapper-picture" src="{{asset('images/DSC00111.JPG')}}"width="350" height="220px">
-      </a>
-    </div> 
   </div>
 @endsection

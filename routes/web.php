@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', "itemsController@index");
+Route::get('items/index', "itemsController@index");
 Route::get("items/new","itemsController@new");
 Route::post("items/new","itemsController@create");

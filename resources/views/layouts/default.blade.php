@@ -20,7 +20,7 @@
           </a>
        </div>
        <div class="mainpage-header__nav-wrapper-text">
-        　<a href="items/new" > 
+        　<a href="/items/new" > 
           <i class="fas fa-upload"></i>
           投稿する
           </a>

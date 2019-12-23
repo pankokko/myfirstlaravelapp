@@ -6,6 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class item extends Model
 {
-    
-    protected $fillable = ['image'];
+protected $fillable = ['path'];
 }
