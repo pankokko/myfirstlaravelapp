@@ -22,12 +22,7 @@ class itemsController extends Controller
     if ($request->isMethod('POST')) {
       $path = $request->file('path')->store('public/temp');
       Item::create(['path' => basename($path)]);
-
   }
-  // GET
-    // $imagefile = $request->file('path');
-    // $temp_path = $imagefile->store('public/temp');
-    // eval(\Psy\sh());
     return redirect('items/index');
   }
 }

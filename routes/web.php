@@ -14,3 +14,7 @@
 Route::get('items/index', "itemsController@index");
 Route::get("items/new","itemsController@new");
 Route::post("items/new","itemsController@create");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
