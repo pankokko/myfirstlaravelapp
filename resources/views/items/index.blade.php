@@ -15,6 +15,7 @@
       <div class="top-nav-wrapper-list">
         <a class="top-nav-wrapper-list-link" href="#">おまかせ</a> 
       </div>
+     
       <div class="top-nav-wrapper-list">
         <a class="top-nav-wrapper-list-link" href="#">新着</a> 
       </div>
@@ -29,4 +30,19 @@
     </div>
     @endforeach
   </div>
+  <footer>
+    <div class="pagetop">
+      <a href="#" class="pagetop-link">
+        <span class="pagetop-link-page-top">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+          PAGE TOP
+        </span>
+      </a>  
+    </div>
+    <div class="copy">
+      <div class="copy-right">
+        Copyright © pankokko
+      </div>
+    </div>  
+  </footer>
 @endsection

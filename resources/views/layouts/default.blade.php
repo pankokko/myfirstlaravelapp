@@ -3,6 +3,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/app.css"> 
 <title>@yield("title")</title>
+<script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 <body>
 <header class="mainpage-header">
@@ -35,13 +37,19 @@
      </div>
      <div class="mainpage-header__nav-right-wrapper" >
        <div class="mainpage-header__nav-right-wrapper-login" >
-         <a href="#">
-         <p class="mainpage-header__nav-right-wrapper-login-text" >ログイン</p>
-        </a>
+          @if (Auth::check())
+          <a href="{{ route('logout') }}">
+            <p class="mainpage-header__nav-right-wrapper-login-text" >ログアウト</p>
+          </a>
+         @else
+           <a href="{{ route('login') }}">
+           <p class="mainpage-header__nav-right-wrapper-login-text" >ログイン</p>
+          </a>
+      　　@endif
        </div>  
        <div class="mainpage-header__nav-right-wrapper-signup" >
-         <a href="#">
-           <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
+         <a href="{{route('register')}}">
+         <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
          </a>
        </div>  
      </div>  
@@ -50,20 +58,5 @@
 <main>
   @yield('content')
 </main>
-<footer>
-    <div class="pagetop">
-      <a href="#" class="pagetop-link">
-        <span class="pagetop-link-page-top">
-          <i class="fa fa-angle-up" aria-hidden="true"></i>
-          PAGE TOP
-        </span>
-      </a>  
-    </div>
-    <div class="copy">
-      <div class="copy-right">
-        Copyright © pankokko
-      </div>
-    </div>  
-  </footer>
 </body>
 </html>

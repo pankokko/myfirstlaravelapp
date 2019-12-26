@@ -9,6 +9,7 @@ class itemsController extends Controller
   public function index(request $request)
   { 
      $items =Item::all();
+    // eval(\Psy\sh());
      return view("items.index", ['items'=>$items]);
      
   }
@@ -18,7 +19,7 @@ class itemsController extends Controller
   }
 
   public function create(Request $request){
-
+    
     if ($request->isMethod('POST')) {
       $path = $request->file('path')->store('public/temp');
       Item::create(['path' => basename($path)]);
