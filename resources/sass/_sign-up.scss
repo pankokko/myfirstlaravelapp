@@ -73,8 +73,11 @@
   border-radius: 4px;
   transition:all 0.2s;
   position: relative;
+  text-decoration: none;
     &-textbox{
       margin:0 auto;
+      color:black;
+      line-height:40px;
     }
 }
 
@@ -84,4 +87,9 @@
 
  .login-btn:hover{
   background-color: rgba(0,0,0,.78);
+ }
+
+ .flash_message{
+  color:red;
+  margin-bottom:10px;
  }

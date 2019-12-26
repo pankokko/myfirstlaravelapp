@@ -2,7 +2,12 @@
 @section('content')
 <div class="sign-up">
   <div class="sign-up__wrapper">
-    <h1 class="sign-up__wrapper-text">新規登録</h1>
+      @if (session('flash'))
+        <div class="flash_message">
+          {{ session('flash') }}
+        </div>
+      @endif
+    <h2 class="sign-up__wrapper-text">新規登録</h2>
     <form class="sign-up__wrapper-form" method="POST" action="{{route('register')}}">
       @csrf
       <div class="sign-up__wrapper-form-box">
@@ -21,9 +26,9 @@
       <p class="sign-up__wrapper-form-button-registrate">登録</p>    
       </button>
     </form>
-      <button class="login-btn">
+      <a class="login-btn" href="{{route("login")}}">
        <p class="login-btn-textbox">またはログイン</p>
-      </button>
+      </a>
 
   </div>
 </div>

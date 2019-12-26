@@ -6093,6 +6093,10 @@ h1 {
           margin-inline-end: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .mainpage-header {
   position: relative;
 }
@@ -6473,10 +6477,13 @@ footer .pagetop-link-page-top {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: relative;
+  text-decoration: none;
 }
 
 .login-btn-textbox {
   margin: 0 auto;
+  color: black;
+  line-height: 40px;
 }
 
 .sign-up__wrapper-form-button:hover {
@@ -6485,6 +6492,11 @@ footer .pagetop-link-page-top {
 
 .login-btn:hover {
   background-color: rgba(0, 0, 0, 0.78);
+}
+
+.flash_message {
+  color: red;
+  margin-bottom: 10px;
 }
 
 /*!

@@ -53,7 +53,7 @@
       　　@endif
        </div>  
        @if (Auth::check())
-       <div class="fake" >
+       <div class="space" >
         </div>
        @else
        <div class="mainpage-header__nav-right-wrapper-signup" >
