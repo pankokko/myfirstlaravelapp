@@ -64,6 +64,13 @@
     } 
  }
 
+ .login-user-name{
+   margin-right: 18px;
+   &-text{
+     color:white;
+     font-size:16px;
+   }
+ }
 
  .mainpage-header__nav-wrapper-form-btn:hover{
   background-color:rgba(#eee,0.5);

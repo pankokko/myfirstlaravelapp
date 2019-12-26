@@ -36,6 +36,11 @@
        </form>
      </div>
      <div class="mainpage-header__nav-right-wrapper" >
+       @if(Auth::check())
+       <div class="login-user-name">
+         <p class="login-user-name-text">{{Auth::user()->name}}</p>
+       </div>  
+       @endif 
        <div class="mainpage-header__nav-right-wrapper-login" >
           @if (Auth::check())
           <a href="{{ route('logout') }}">
