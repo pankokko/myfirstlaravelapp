@@ -8,7 +8,8 @@
   align-content: center;
   letter-spacing: 0;
     &__wrapper{
-      width: 320px;
+      width: 420px;
+      margin-bottom:160px;
       max-width: calc(100% - 20px);
       display: flex;
       flex-direction: column;

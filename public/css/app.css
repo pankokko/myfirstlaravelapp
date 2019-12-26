@@ -6395,7 +6395,8 @@ footer .pagetop-link-page-top {
 }
 
 .sign-up__wrapper {
-  width: 320px;
+  width: 420px;
+  margin-bottom: 160px;
   max-width: calc(100% - 20px);
   display: -webkit-box;
   display: flex;
