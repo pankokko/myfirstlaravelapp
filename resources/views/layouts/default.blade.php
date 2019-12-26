@@ -52,11 +52,16 @@
           </a>
       　　@endif
        </div>  
+       @if (Auth::check())
+       <div class="fake" >
+        </div>
+       @else
        <div class="mainpage-header__nav-right-wrapper-signup" >
-         <a href="{{route('register')}}">
-         <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
-         </a>
-       </div>  
+          <a href="{{route('register')}}">
+          <p class="mainpage-header__nav-right-wrapper-login-text">新規登録</p>
+          </a>
+        </div>
+       @endif
      </div>  
   </nav> 
 </header>
