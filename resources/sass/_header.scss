@@ -1,7 +1,12 @@
 .mainpage-header{
   position:relative;
+  a{
+    text-decoration:none;
+    color:$blue;
+  }
   &-logo{
-    color:green;
+   font-size:35px;
+   text-decoration:none;
     padding:15px;
     background:#fff;
     z-index:1;
