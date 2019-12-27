@@ -1,16 +1,17 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/app.css"> 
+    <link rel="stylesheet" href="/css/style.css"> 
 <title>@yield("title")</title>
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 </head>
 <body>
 <header class="mainpage-header">
+    <a href="/">
   <h1 class="mainpage-header-logo">
-    <a href="/"></a>
     PHOTOWEB
+  </a>
     <span class="mainpage-header-logo__text">お気に入りの写真を投稿しよう！</span>
   </h1>
    <nav class="mainpage-header__nav">
