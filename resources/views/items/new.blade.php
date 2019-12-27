@@ -22,6 +22,10 @@
           写真を選択
           <input id="file_input" type="file" class="image-input" name="path">
         </label>
+        <div class="upload-wrapper-form-content-title">
+          タイトルを入力
+          <input type="text" name="title" id="title_input" class="title-input">
+        </div>
       </div>
       <div class="btns">
         <input class="btns-upload-btn" type="button" value="キャンセル">
