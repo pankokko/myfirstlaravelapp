@@ -58,6 +58,7 @@
               &-registrate{
                 text-align:center;
                 margin:0 auto;
+                font-size:17px;
             }
           }
         }
@@ -93,4 +94,8 @@
  .flash_message{
   color:red;
   margin-bottom:10px;
+ }
+
+ .under-bar{
+  border-bottom: 1px solid rgba(0,0,0,.14);
  }

@@ -4,11 +4,13 @@
 @endsection
 @section('content')
   <div class="pictures-wrapper">
+    @foreach($randoms as $random)
     <div class="picture-wrapper_photo">
       <a href="#">
-        <img class="picture-wrapper_photo-main"  src="{{ asset('images/DSC00178.JPG') }}" alt="logo" width="100%" height="600px">
+        <img class="picture-wrapper_photo-main"  src="{{ asset('/storage/temp/'.$random->path) }}" alt="logo" width="100%" height="600px">
       </a>
     </div> 
+    @endforeach 
   </div>
   <div class="top-nav"> 
     <div class="top-nav-wrapper">
@@ -41,6 +43,7 @@
     <div class="copy">
       <div class="copy-right">
         Copyright © pankokko
+      
       </div>
     </div>  
   </footer>

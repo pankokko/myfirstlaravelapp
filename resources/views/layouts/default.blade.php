@@ -8,9 +8,10 @@
 </head>
 <body>
 <header class="mainpage-header">
+    <a href="/">
   <h1 class="mainpage-header-logo">
-    <a href="/"></a>
     PHOTOWEB
+  </a>
     <span class="mainpage-header-logo__text">お気に入りの写真を投稿しよう！</span>
   </h1>
    <nav class="mainpage-header__nav">

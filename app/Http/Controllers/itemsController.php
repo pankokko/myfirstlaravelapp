@@ -11,8 +11,9 @@ class itemsController extends Controller
   public function index(request $request)
   { 
      $items =Item::all();
-    // eval(\Psy\sh());
-     return view("items/index")->with(['items'=>$items]);
+     $randoms = Item::all()->random(1);
+    //  eval(\Psy\sh());
+     return view("items/index")->with(['items' => $items, 'randoms' => $randoms]);
      
   }
 
@@ -30,7 +31,7 @@ class itemsController extends Controller
       // eval(\Psy\sh());
     $this->validate($request, Item::$rules);
     $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>$user]);
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user]);
     }
     return redirect('/');
   }
