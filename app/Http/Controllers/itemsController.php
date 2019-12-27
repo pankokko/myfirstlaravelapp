@@ -25,9 +25,13 @@ class itemsController extends Controller
   }
 
   public function create(Request $request){
+    if(Auth::check()){
+    $user = Auth::user()->id;
+      // eval(\Psy\sh());
     $this->validate($request, Item::$rules);
     $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title]);
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>$user]);
+    }
     return redirect('/');
   }
 }
