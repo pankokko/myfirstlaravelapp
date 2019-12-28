@@ -18,6 +18,11 @@ class itemsController extends Controller
      
   }
 
+  public function show(request $request)
+  {
+    return view("items/show");
+  }
+
   public function new(Request $request){
     if(Auth::check()){
       return view("items/new");
