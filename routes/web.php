@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', "itemsController@index");
-Route::get("items/new","itemsController@new");
+Route::get("/", "itemsController@index")->name("/");
+Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
+Route::get("items/new","itemsController@new")->name("new");
 Route::post("items/new","itemsController@create");
 
-Auth::routes();
 
+
+Auth::routes();
 Route::get("/logout","HomeController@logout");
 Route::get('/home', 'HomeController@index')->name('home');

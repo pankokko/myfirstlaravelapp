@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="mainpage-header">
-    <a href="/">
+  <a href="{{route("/")}}">
   <h1 class="mainpage-header-logo">
     PHOTOWEB
   </a>
@@ -23,7 +23,7 @@
           </a>
        </div>
        <div class="mainpage-header__nav-wrapper-text">
-        　<a href="/items/new" > 
+          <a href="{{route("new")}}" > 
           <i class="fas fa-upload"></i>
           投稿する
           </a>
@@ -69,5 +69,6 @@
 <main>
   @yield('content')
 </main>
+
 </body>
 </html>

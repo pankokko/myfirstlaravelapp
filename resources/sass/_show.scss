@@ -1,0 +1,36 @@
+.show-wrapper{
+  width:1000px;
+  margin: 30px auto 0 auto ;
+  text-align:center;
+  a{
+    width:100%;
+    margin: 0 auto;
+  }
+}
+
+.show-pictures{
+  margin:5px auto;
+  width:100%;
+  display:flex;
+  justify-content:row;
+    &-wrapper{
+      width:33%;
+      margin:3px;
+    }
+}
+
+.user-other-pics{
+  font-size: 1.25rem;
+  float:left;
+  font-weight: 500;
+  color:$gray;
+}
+
+.other-pics-wrapper{
+  margin-top:30px;
+}
+
+.discription{
+  margin-top:8px;
+  color:$lightgray;
+}
