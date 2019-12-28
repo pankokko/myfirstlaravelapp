@@ -5957,10 +5957,16 @@ readers do not read off random characters that represent icons */
   font-size: 1.25rem;
   float: left;
   font-weight: 500;
+  color: #666;
 }
 
 .other-pics-wrapper {
   margin-top: 30px;
+}
+
+.discription {
+  margin-top: 8px;
+  color: #777777;
 }
 
 /*!

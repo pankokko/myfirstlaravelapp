@@ -12,7 +12,7 @@
 */
 
 Route::get("/", "itemsController@index");
-Route::get("items/show", "itemsController@show");
+Route::get("items/{id}/show", "itemsController@show");
 Route::get("items/new","itemsController@new");
 Route::post("items/new","itemsController@create");
 

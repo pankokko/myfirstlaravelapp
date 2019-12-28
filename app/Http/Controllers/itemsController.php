@@ -15,12 +15,14 @@ class itemsController extends Controller
      $randoms = Item::all()->random(1);
       // eval(\Psy\sh());
      return view("items/index")->with(['items' => $items, 'randoms' => $randoms]);
-     
   }
 
-  public function show(request $request)
+  public function show($id)
   {
-    return view("items/show");
+    $name = Item::find($id)->user->name;
+    $item = Item::find($id);
+    // eval(\Psy\sh());
+    return view("items/show")->with(['item' => $item, 'name' => $name]);
   }
 
   public function new(Request $request){

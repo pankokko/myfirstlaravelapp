@@ -8,7 +8,6 @@ class item extends Model
 {
 protected $fillable = ['path','title','user_id'];
 
-
 public function user(){
   return $this->belongsTo('App\User');
 }
