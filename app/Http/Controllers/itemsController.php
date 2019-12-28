@@ -21,8 +21,9 @@ class itemsController extends Controller
   {
     $name = Item::find($id)->user->name;
     $item = Item::find($id);
-    // eval(\Psy\sh());
-    return view("items/show")->with(['item' => $item, 'name' => $name]);
+    $items = Item::find($id)->user->items->reject($item)->take(3);
+    //  eval(\Psy\sh());
+    return view("items/show")->with(['item' => $item, 'name' => $name , 'items' => $items ]);
   }
 
   public function new(Request $request){
