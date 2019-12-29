@@ -6163,53 +6163,6 @@ a {
   font-size: 11px;
 }
 
-.gnav {
-  display: -webkit-box;
-  display: flex;
-  height: 2rem;
-  width: 1000px;
-}
-
-.gnav > li {
-  /*親階層のみ幅を25%にする*/
-  width: 25%;
-}
-
-/*全てのリスト・リンク共通*/
-
-.gnav li {
-  list-style: none;
-  position: relative;
-}
-
-.gnav li a {
-  background: #001b34;
-  border-right: 1px solid #eee;
-  color: #fff;
-  display: block;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-}
-
-.gnav li li {
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.gnav li li a {
-  border-top: 1px solid #eee;
-}
-
-.gnav li:hover > ul > li {
-  height: 2rem;
-  overflow: visible;
-}
-
 .mainpage-header__nav {
   height: 45px;
   background: #333;
@@ -6260,6 +6213,8 @@ a {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .mainpage-header__nav-right-wrapper a {
@@ -6293,7 +6248,10 @@ a {
 }
 
 .login-user-name {
-  margin-right: 18px;
+  margin-top: 6px;
+  margin-right: 40px;
+  border-radius: 4px;
+  width: 80px;
 }
 
 .login-user-name-text {
@@ -6303,6 +6261,66 @@ a {
 
 .mainpage-header__nav-wrapper-form-btn:hover {
   background-color: rgba(238, 238, 238, 0.5);
+}
+
+.gnav {
+  display: -webkit-box;
+  display: flex;
+  height: 2rem;
+  width: 100px;
+}
+
+.gnav > li {
+  /*親階層のみ幅を25%にする*/
+  width: 100%;
+}
+
+/*全てのリスト・リンク共通*/
+
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+
+.gnav li a {
+  background: #666;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav-user-name {
+  border-radius: 4px;
+}
+
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gnav li li a {
+  background: white;
+  color: black;
+}
+
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+
+.gnav-list-link {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.gnav-list-link:hover {
+  background-color: #e5e5e5;
 }
 
 .pictures-wrapper {

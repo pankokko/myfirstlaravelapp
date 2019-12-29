@@ -31,7 +31,13 @@
      <div class="mainpage-header__nav-right-wrapper" >
        @if(Auth::check())
         <div class="login-user-name">
-         <p class="login-user-name-text">{{Auth::user()->name}}</p>   
+          <ul class="gnav">
+            <li>
+              <a class="gnav-user-name" href="">{{Auth::user()->name}}</a>
+              <ul>
+                <li class="gnav-list"><a class="gnav-list-link" href="/users/{{Auth::user()->id}}/show">マイページ</a></li>
+                <li class="gnav-list" ><a class="gnav-list-link" href="#">トップページ</a></li>
+             </ul>
         </div>
        @endif 
        <div class="mainpage-header__nav-right-wrapper-login" >
