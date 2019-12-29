@@ -1,4 +1,5 @@
-@extends("layouts.default")
+@extends("layouts/default")
+@include("components/header")
 @section("content")
   <div class="show-wrapper">
     <a href="#modal-01">
@@ -13,9 +14,19 @@
           <a href="#!" class="modal-close">×</a>
       </div>
     </div>
-      <p class="discription">{{$item->title}} taken by {{$name}}</p>
+      <p class="discription">{{$item->title}}<span class="discription-text"> taken by {{$user->name}}</span>
+        @if(Auth::user()->id == $user->id)
+        <form action="/items/{{$item->id}}/destroy" method="post">
+          @csrf
+          {{ method_field('delete')}}
+        <i class="fas fa-trash">
+          <input id="delete-input" type="submit" value="削除">
+        </i>
+        </form>
+        @endif
+      </p>
       <div class=other-pics-wrapper>
-      <p class="user-other-pics">{{$name}}さんの他の作品</p>
+        <p class="user-other-pics">{{$user->name}}さんの他の作品</p>
         <div class="show-pictures">
           @foreach($items as $item)
             <div class="show-pictures-wrapper"> 
@@ -27,4 +38,6 @@
         </div>
       </div>
   </div>
+
+
 @endsection 

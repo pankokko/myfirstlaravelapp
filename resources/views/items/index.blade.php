@@ -2,6 +2,7 @@
 @section("title")
 インデックスページ
 @endsection
+@include("components/header")
 @section('content')
   <div class="pictures-wrapper">
     @foreach($randoms as $random)
@@ -25,26 +26,11 @@
   <div class="top-pictures">
     @foreach ($items as $item)
     <div class="top-pictures-wrapper"> 
-      <a  class="top-pictures-wrapper-link" href="items/{{$item->id}}/show">
+      <a  class="top-pictures-wrapper-link" href="/items/{{$item->id}}/show">
         <img class="top-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$item->path)}}"width="350" height="220px">
       </a>
     </div>
     @endforeach
   </div>
-  <footer>
-    <div class="pagetop">
-      <a href="#" class="pagetop-link">
-        <span class="pagetop-link-page-top">
-          <i class="fa fa-angle-up" aria-hidden="true"></i>
-          PAGE TOP
-        </span>
-      </a>  
-    </div>
-    <div class="copy">
-      <div class="copy-right">
-        Copyright © pankokko
-      
-      </div>
-    </div>  
-  </footer>
+  @include("components/footer")
 @endsection

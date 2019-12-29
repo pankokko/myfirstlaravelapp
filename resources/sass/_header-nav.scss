@@ -38,6 +38,7 @@
  .mainpage-header__nav-right-wrapper{
    display:flex;
    align-items:center;
+   justify-content: space-between;
      a{
         color:white;
      }
@@ -65,13 +66,81 @@
  }
 
  .login-user-name{
-   margin-right: 18px;
+   margin-top:6px;
+   margin-right:40px;
+   border-radius:4px;
+    width: 80px;
    &-text{
      color:white;
      font-size:16px;
    }
- }
+  }
 
  .mainpage-header__nav-wrapper-form-btn:hover{
   background-color:rgba(#eee,0.5);
  }
+
+
+
+.gnav {
+  display: flex;
+  height: 2rem;
+  width: 100px;
+ 
+}
+.gnav > li {
+  width: 100%;
+}
+
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+.gnav li a {
+  background: #666;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav-user-name{
+  border-radius:4px;
+}
+
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  transition:all 0.3s;
+  top:2px;
+}
+.gnav li li a {
+  background:white;
+  color:black;
+  // border-top: 1px solid #666;
+}
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+
+.gnav-list-link{
+  transition: all 0.1s;
+}
+
+.gnav-list-link:hover{
+  background-color:$azuki;
+}
+
+
+
+
+
+
+
+
+
+

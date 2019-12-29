@@ -1,0 +1,39 @@
+.user-container{
+  position: relative;
+  // margin: -20px 0 20px 0;
+  padding-top: 10px;
+  width: 100%;
+  text-align:center;
+  z-index: 1000;
+  // background:$azuki;
+  &-name{
+    color:$gray;
+    margin-bottom:10px;
+  }
+  &-nav{
+    position: relative;
+    display:flex;
+    justify-content:center;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    // min-height: 50px;
+    // height: auto !important;
+    // height: 50px;
+    border: none;
+      &-list{
+        margin-right:18px;
+      }
+  }
+}
+
+.user-pictures{
+  width:1000px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: row;
+  flex-wrap: wrap;
+  &-wrapper{
+    margin:3px;
+  }
+}

@@ -5939,6 +5939,15 @@ readers do not read off random characters that represent icons */
   margin: 0 auto;
 }
 
+.show-wrapper .fa-trash {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: 13px;
+  color: #666;
+  float: right;
+  cursor: pointer;
+}
+
 .show-pictures {
   margin: 5px auto;
   width: 100%;
@@ -5961,12 +5970,23 @@ readers do not read off random characters that represent icons */
 }
 
 .other-pics-wrapper {
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .discription {
   margin-top: 8px;
   color: #777777;
+  font-size: 23px;
+}
+
+.discription-text {
+  font-size: 16px;
+}
+
+#delete-input {
+  border: none;
+  cursor: pointer;
+  color: #666;
 }
 
 /*!
@@ -5984,6 +6004,10 @@ readers do not read off random characters that represent icons */
 html {
   color: #000;
   background: #FFF;
+}
+
+body {
+  font-family: "Lucida Grande", Arial, Helvetica, serif;
 }
 
 /*
@@ -6207,6 +6231,8 @@ a {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .mainpage-header__nav-right-wrapper a {
@@ -6240,7 +6266,10 @@ a {
 }
 
 .login-user-name {
-  margin-right: 18px;
+  margin-top: 6px;
+  margin-right: 40px;
+  border-radius: 4px;
+  width: 80px;
 }
 
 .login-user-name-text {
@@ -6250,6 +6279,64 @@ a {
 
 .mainpage-header__nav-wrapper-form-btn:hover {
   background-color: rgba(238, 238, 238, 0.5);
+}
+
+.gnav {
+  display: -webkit-box;
+  display: flex;
+  height: 2rem;
+  width: 100px;
+}
+
+.gnav > li {
+  width: 100%;
+}
+
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+
+.gnav li a {
+  background: #666;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav-user-name {
+  border-radius: 4px;
+}
+
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 2px;
+}
+
+.gnav li li a {
+  background: white;
+  color: black;
+}
+
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+
+.gnav-list-link {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.gnav-list-link:hover {
+  background-color: #e5e5e5;
 }
 
 .pictures-wrapper {
@@ -6628,5 +6715,48 @@ footer .pagetop-link-page-top {
 
 .modal-wrapper .modal-close:hover {
   color: #2b2e38 !important;
+}
+
+.user-container {
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.user-container-name {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.user-container-nav {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+  border: none;
+}
+
+.user-container-nav-list {
+  margin-right: 18px;
+}
+
+.user-pictures {
+  width: 1000px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  flex-wrap: wrap;
+}
+
+.user-pictures-wrapper {
+  margin: 3px;
 }
 

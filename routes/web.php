@@ -13,11 +13,11 @@
 
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
+Route::delete('items/{id}/destroy', 'itemsController@destroy');
 Route::get("items/new","itemsController@new")->name("new");
 Route::post("items/new","itemsController@create");
 
-
-
 Auth::routes();
 Route::get("/logout","HomeController@logout");
+Route::get("users/{id}/show","usersController@show");
 Route::get('/home', 'HomeController@index')->name('home');
