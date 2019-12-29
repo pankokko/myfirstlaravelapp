@@ -18,5 +18,5 @@ Route::post("items/new","itemsController@create");
 
 Auth::routes();
 Route::get("/logout","HomeController@logout");
-Route::get("users/show","usersController@show");
+Route::get("users/{id}/show","usersController@show");
 Route::get('/home', 'HomeController@index')->name('home');

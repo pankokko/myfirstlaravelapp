@@ -40,6 +40,7 @@ class itemsController extends Controller
     $path = $request->file('path')->store('public/temp');
     Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user]);
     // eval(\Psy\sh());
+  
     }
     return redirect('/');
   }

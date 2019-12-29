@@ -8,9 +8,12 @@ require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/
 
 class usersController extends Controller
 {
-  public function show(request $request)
+  public function show($id)
   {
-      return view("users/show");
+    $users = User::with("items")->find(Auth::user()->id);
+   // eval(\Psy\sh());
+    
+  return view("users/show")->with(["users" => $users]);
   }
 
 }

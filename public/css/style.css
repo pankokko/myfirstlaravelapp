@@ -5986,6 +5986,10 @@ html {
   background: #FFF;
 }
 
+body {
+  font-family: "Lucida Grande", Arial, Helvetica, serif;
+}
+
 /*
   TODO remove settings on BODY since we can't namespace it.
 */
@@ -6628,5 +6632,48 @@ footer .pagetop-link-page-top {
 
 .modal-wrapper .modal-close:hover {
   color: #2b2e38 !important;
+}
+
+.user-container {
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.user-container-name {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.user-container-nav {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+  border: none;
+}
+
+.user-container-nav-list {
+  margin-right: 18px;
+}
+
+.user-pictures {
+  width: 1000px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  flex-wrap: wrap;
+}
+
+.user-pictures-wrapper {
+  margin: 3px;
 }
 
