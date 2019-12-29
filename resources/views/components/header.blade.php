@@ -30,9 +30,9 @@
      </div>
      <div class="mainpage-header__nav-right-wrapper" >
        @if(Auth::check())
-       <div class="login-user-name">
-         <p class="login-user-name-text">{{Auth::user()->name}}</p>
-       </div>  
+        <div class="login-user-name">
+         <p class="login-user-name-text">{{Auth::user()->name}}</p>   
+        </div>
        @endif 
        <div class="mainpage-header__nav-right-wrapper-login" >
           @if (Auth::check())
@@ -43,7 +43,7 @@
            <a href="{{ route('login') }}">
            <p class="mainpage-header__nav-right-wrapper-login-text" >ログイン</p>
           </a>
-      　　@endif
+        @endif
        </div>  
        @if (Auth::check())
        <div class="space" >

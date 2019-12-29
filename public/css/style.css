@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/*!
  * Font Awesome Free 5.12.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -6159,6 +6161,53 @@ a {
 
 .mainpage-header-logo__text {
   font-size: 11px;
+}
+
+.gnav {
+  display: -webkit-box;
+  display: flex;
+  height: 2rem;
+  width: 1000px;
+}
+
+.gnav > li {
+  /*親階層のみ幅を25%にする*/
+  width: 25%;
+}
+
+/*全てのリスト・リンク共通*/
+
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+
+.gnav li a {
+  background: #001b34;
+  border-right: 1px solid #eee;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.gnav li li a {
+  border-top: 1px solid #eee;
+}
+
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
 }
 
 .mainpage-header__nav {
