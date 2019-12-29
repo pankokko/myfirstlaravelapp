@@ -1,4 +1,5 @@
 @extends("layouts.default")
+@include("components/header")
 @section("content")
   <div class="show-wrapper">
     <a href="#modal-01">

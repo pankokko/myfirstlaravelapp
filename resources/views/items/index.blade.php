@@ -2,6 +2,7 @@
 @section("title")
 インデックスページ
 @endsection
+@include("components/header")
 @section('content')
   <div class="pictures-wrapper">
     @foreach($randoms as $random)
@@ -31,20 +32,5 @@
     </div>
     @endforeach
   </div>
-  <footer>
-    <div class="pagetop">
-      <a href="#" class="pagetop-link">
-        <span class="pagetop-link-page-top">
-          <i class="fa fa-angle-up" aria-hidden="true"></i>
-          PAGE TOP
-        </span>
-      </a>  
-    </div>
-    <div class="copy">
-      <div class="copy-right">
-        Copyright © pankokko
-      
-      </div>
-    </div>  
-  </footer>
+  @include("components/footer")
 @endsection
