@@ -52,8 +52,7 @@
         @endif
        </div>  
        @if (Auth::check())
-       <div class="space" >
-        </div>
+       <div class="space"></div>
        @else
        <div class="mainpage-header__nav-right-wrapper-signup" >
           <a href="{{route('register')}}">

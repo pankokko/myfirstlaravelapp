@@ -11,7 +11,7 @@ class usersController extends Controller
   public function show($id)
   {
     $users = User::with("items")->find(Auth::user()->id);
-   // eval(\Psy\sh());
+    // eval(\Psy\sh());
     
   return view("users/show")->with(["users" => $users]);
   }

@@ -13,6 +13,7 @@
 
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
+Route::delete('items/{id}/destroy', 'itemsController@destroy');
 Route::get("items/new","itemsController@new")->name("new");
 Route::post("items/new","itemsController@create");
 

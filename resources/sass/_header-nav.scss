@@ -88,10 +88,10 @@
   width: 100px;
  
 }
-.gnav > li {/*親階層のみ幅を25%にする*/
+.gnav > li {
   width: 100%;
 }
-/*全てのリスト・リンク共通*/
+
 .gnav li {
   list-style: none;
   position: relative;
@@ -115,6 +115,7 @@
   height: 0;
   overflow: hidden;
   transition:all 0.3s;
+  top:2px;
 }
 .gnav li li a {
   background:white;
@@ -133,3 +134,13 @@
 .gnav-list-link:hover{
   background-color:$azuki;
 }
+
+
+
+
+
+
+
+
+
+

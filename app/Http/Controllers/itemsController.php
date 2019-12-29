@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Item;
 require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
@@ -19,10 +20,19 @@ class itemsController extends Controller
 
   public function show($id)
   {
-    $name = Item::find($id)->user->name;
+    $user = Item::find($id)->user;
+    // eval(\Psy\sh());
     $item = Item::find($id);
     $items = Item::find($id)->user->items->reject($item)->take(3);
-    return view("items/show")->with(['item' => $item, 'name' => $name , 'items' => $items ]);
+    return view("items/show")->with(['item' => $item, 'user' => $user , 'items' => $items ]);
+  }
+
+  public function destroy($id)
+  {
+    $item = Item::findOrFail($id);
+    Storage::delete('public/temp/'.$item->path);
+    $item->delete();
+    return redirect('/');
   }
 
   public function new(Request $request){
