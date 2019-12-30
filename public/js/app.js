@@ -49604,24 +49604,15 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// function popupImage() {
-//   var popup = document.getElementById('js-popup');
-//   if(!popup) return;
-//   var blackBg = document.getElementById('js-black-bg');
-//   var blackBg = document.getElementById('js-black-bg');
-//   var closeBtn = document.getElementById('js-close-btn');
-//   var showBtn = document.getElementById('js-show-popup');
-//   closePopUp(blackBg);
-//   closePopUp(closeBtn);
-//   closePopUp(showBtn);
-//   function closePopUp(elem) {
-//     if(!elem) return;
-//     elem.addEventListener('click', function() {
-//       popup.classList.toggle('is-show');
-//     });
-//   }
-// }
-// popupImage();
+function kakunin() {
+  obj = document.test.linkselect;
+  index = obj.selectedIndex;
+
+  if (index != 0) {
+    href = obj.options[index].value;
+    location.href = href;
+  }
+}
 
 /***/ }),
 
