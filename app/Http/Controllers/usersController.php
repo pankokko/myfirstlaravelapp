@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 
-class usersController extends Controller
+class UsersController extends Controller
 {
   public function show($id)
   {

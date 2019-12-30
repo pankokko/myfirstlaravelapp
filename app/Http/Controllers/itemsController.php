@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Item;
 require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
-class itemsController extends Controller
+class ItemsController extends Controller
 {
  
 
@@ -50,7 +50,7 @@ class itemsController extends Controller
     $user = Auth::user()->id;
     $this->validate($request, Item::$rules);
     $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user]);
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
     // eval(\Psy\sh());
   
     }
