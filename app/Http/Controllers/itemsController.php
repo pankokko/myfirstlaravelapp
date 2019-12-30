@@ -15,7 +15,7 @@ class itemsController extends Controller
      $items =Item::all();
      $randoms = Item::all()->random(1);
       // eval(\Psy\sh());
-     return view("items/index")->with(['items' => $items, 'randoms' => $randoms]);
+     return view("items/index",compact("items","randoms"));
   }
 
   public function show($id)
@@ -24,14 +24,16 @@ class itemsController extends Controller
     // eval(\Psy\sh());
     $item = Item::find($id);
     $items = Item::find($id)->user->items->reject($item)->take(3);
-    return view("items/show")->with(['item' => $item, 'user' => $user , 'items' => $items ]);
+    return view("items/show",compact("item","user","items"));
   }
 
   public function destroy($id)
   {
     $item = Item::findOrFail($id);
+    if(Auth::user()->id  == $item->user_id){ 
     Storage::delete('public/temp/'.$item->path);
     $item->delete();
+    }
     return redirect('/');
   }
 

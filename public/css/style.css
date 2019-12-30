@@ -6675,7 +6675,7 @@ footer .pagetop-link-page-top {
   display: inline-block;
   z-index: 20;
   position: relative;
-  width: 50%;
+  width: 80%;
   padding: 8px 8px 8px;
   border-radius: 2px;
   background: #fff;
@@ -6686,6 +6686,10 @@ footer .pagetop-link-page-top {
 .modal-wrapper .modal-window .modal-content {
   max-height: 80vh;
   overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-overlay {
