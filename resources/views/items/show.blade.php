@@ -9,20 +9,20 @@
       <a href="#!" class="modal-overlay"></a>
       <div class="modal-window">
         <div class="modal-content">
-          <img src="{{asset('/storage/temp/'.$item->path)}}" width="100%">
+          <img src="{{asset('/storage/temp/'.$item->path)}}" width="100%" >
         </div>
           <a href="#!" class="modal-close">×</a>
       </div>
     </div>
       <p class="discription">{{$item->title}}<span class="discription-text"> taken by {{$user->name}}</span>
         @if(Auth::user()->id == $user->id)
-        <form action="/items/{{$item->id}}/destroy" method="post">
-          @csrf
-          {{ method_field('delete')}}
-        <i class="fas fa-trash">
-          <input id="delete-input" type="submit" value="削除">
-        </i>
-        </form>
+          <form action="/items/{{$item->id}}/destroy" method="post">
+            @csrf
+            {{ method_field('delete')}}
+            <i class="fas fa-trash">
+              <input id="delete-input" type="submit" value="削除">
+            </i>
+          </form>
         @endif
       </p>
       <div class=other-pics-wrapper>
