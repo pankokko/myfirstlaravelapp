@@ -45,7 +45,29 @@ class ItemsController extends Controller
     }
   }
 
-  // public function sort(request $request)
+  
+
+  public function create(Request $request){
+    if(Auth::check()){
+    $user = Auth::user()->id;
+    $this->validate($request, Item::$rules);
+    $path = $request->file('path')->store('public/temp');
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
+    // eval(\Psy\sh());
+    }
+    return redirect('/');
+  }
+
+
+  public function search(request $request)
+  {
+    $keyword = $request->input("keyword");
+    $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
+      //eval(\Psy\sh());
+    return view("items/search",compact("query","keyword"));
+  }
+
+  //public function sort(request $request)
   //  {
   //    return view("items/sort");
   //  }
@@ -59,14 +81,4 @@ class ItemsController extends Controller
   //    return redirect("/");
   //  }
 
-  public function create(Request $request){
-    if(Auth::check()){
-    $user = Auth::user()->id;
-    $this->validate($request, Item::$rules);
-    $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
-    // eval(\Psy\sh());
-    }
-    return redirect('/');
-  }
 }
