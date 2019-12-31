@@ -20,13 +20,11 @@
           投稿する
           </a>
        </div> 
-       <form class="mainpage-header__nav-wrapper-form" method="get" >
-        <input class="mainpage-header__nav-wrapper-form-search" type="text" name="search" placeholder="キーワードを入力"> 
-        <button class="mainpage-header__nav-wrapper-form-btn">
-            <i class="fas fa-search"></i>
-            検索      
-        </button>  
-       </form>
+         <form class="mainpage-header__nav-wrapper-form" action="/items/search" method="get" >
+           @csrf
+          <input class="mainpage-header__nav-wrapper-form-search" type="text" name="keyword" placeholder="キーワードを入力">
+          <input class="mainpage-header__nav-wrapper-form-btn" type="submit" value="検索">
+        </form>
      </div>
      <div class="mainpage-header__nav-right-wrapper" >
        @if(Auth::check())

@@ -14,8 +14,8 @@
           <a href="#!" class="modal-close">×</a>
       </div>
     </div>
-      <p class="discription">{{$item->title}}<span class="discription-text"> taken by {{$user->name}}</span>
-        @if(Auth::user()->id == $user->id)
+      <p class="discription">{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span>
+        @if(Auth::check() && Auth::user()->id == $item->user->id)
           <form action="/items/{{$item->id}}/destroy" method="post">
             @csrf
             {{ method_field('delete')}}
@@ -26,7 +26,7 @@
         @endif
       </p>
       <div class=other-pics-wrapper>
-        <p class="user-other-pics">{{$user->name}}さんの他の作品</p>
+        <p class="user-other-pics">{{$item->user->name}}さんの他の作品</p>
         <div class="show-pictures">
           @foreach($items as $item)
             <div class="show-pictures-wrapper"> 

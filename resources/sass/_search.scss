@@ -1,0 +1,29 @@
+.search{
+width:1200px;
+margin: 0 auto;
+  &-text{
+  width:100%;
+  margin-top:65px;
+  margin-left:70px;
+    &-p{
+      &-span{
+        font-size:25px;
+        font-weight:bold;
+      }
+    }
+  }
+  &-pictures{
+    width:100%;
+    margin:40px auto ;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+      &-wrapper{
+        margin:0 10px 30px 10px;
+        &-title{
+          font-size:13px;
+          padding-top:7px;
+        }
+      }
+  }
+}

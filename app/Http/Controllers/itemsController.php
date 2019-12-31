@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Item;
 require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
-class itemsController extends Controller
+class ItemsController extends Controller
 {
  
 
@@ -14,16 +14,14 @@ class itemsController extends Controller
   { 
      $items =Item::all();
      $randoms = Item::all()->random(1);
-      // eval(\Psy\sh());
      return view("items/index",compact("items","randoms"));
   }
 
   public function show($id)
   {
-    $user = Item::find($id)->user;
-    // eval(\Psy\sh());
     $item = Item::find($id);
     $items = Item::find($id)->user->items->reject($item)->take(3);
+     // eval(\Psy\sh());
     return view("items/show",compact("item","user","items"));
   }
 
@@ -38,6 +36,8 @@ class itemsController extends Controller
   }
 
   public function new(Request $request){
+    $item = $request->content;
+    //  eval(\Psy\sh());
     if(Auth::check()){
       return view("items/new");
     }else{
@@ -45,15 +45,40 @@ class itemsController extends Controller
     }
   }
 
+  
+
   public function create(Request $request){
     if(Auth::check()){
     $user = Auth::user()->id;
     $this->validate($request, Item::$rules);
     $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user]);
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
     // eval(\Psy\sh());
-  
     }
     return redirect('/');
   }
+
+
+  public function search(request $request)
+  {
+    $keyword = $request->input("keyword");
+    $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
+      //eval(\Psy\sh());
+    return view("items/search",compact("query","keyword"));
+  }
+
+  //public function sort(request $request)
+  //  {
+  //    return view("items/sort");
+  //  }
+
+  //  public function search(request $request)
+  //  {
+  //    $id = $request->category_id;
+  //   $check = Item::all()->find($id == "category_id");
+  //    eval(\Psy\sh());
+  //    $sort  = Item::find($id)->category->items;
+  //    return redirect("/");
+  //  }
+
 }

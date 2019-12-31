@@ -5989,6 +5989,41 @@ readers do not read off random characters that represent icons */
   color: #666;
 }
 
+.search {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.search-text {
+  width: 100%;
+  margin-top: 65px;
+  margin-left: 70px;
+}
+
+.search-text-p-span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.search-pictures {
+  width: 100%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-pictures-wrapper {
+  margin: 0 10px 30px 10px;
+}
+
+.search-pictures-wrapper-title {
+  font-size: 13px;
+  padding-top: 7px;
+}
+
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -6215,6 +6250,7 @@ a {
 .mainpage-header__nav-wrapper-form-btn {
   background: #666;
   border: none;
+  cursor: pointer;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   padding: 5px 8px;
@@ -6464,7 +6500,29 @@ footer .pagetop-link-page-top {
 
 .upload-wrapper-form-content {
   border: solid 1px #e5e5e5;
+  height: 370px;
   padding: 20px;
+  position: relative;
+}
+
+.upload-wrapper-form-content-title {
+  width: 470px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  margin-left: 470px;
+  position: absolute;
+  top: 20;
+}
+
+.upload-wrapper-form-content-title-span {
+  color: red;
+}
+
+.upload-wrapper-form-content-title-input {
+  margin-left: 20px;
+  width: 250px;
 }
 
 .upload-wrapper-form-content-label {
@@ -6472,7 +6530,8 @@ footer .pagetop-link-page-top {
   font-weight: bold;
   text-align: center;
   width: 250px;
-  background: #39c;
+  background: #666;
+  margin-top: 25px;
   padding: 20px 15px;
   margin-bottom: 10px;
   border-radius: 4px;
@@ -6508,6 +6567,16 @@ footer .pagetop-link-page-top {
 
 .btns-upload-btn:hover {
   background-color: rgba(102, 102, 102, 0.5);
+}
+
+.select-box-wrapper {
+  margin-left: 470px;
+  position: absolute;
+  top: 65;
+}
+
+.select-box-wrapper-select {
+  width: 80px;
 }
 
 .sign-up {

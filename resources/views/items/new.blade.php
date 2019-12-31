@@ -2,6 +2,7 @@
 @section("title")
 新規投稿ページ
 @endsection
+@include("components/header")
 @section("content")
   <div class="upload-wrapper">
     <div class="upload-wrapper-bar">
@@ -23,8 +24,16 @@
           <input id="file_input" type="file" class="image-input" name="path">
         </label>
         <div class="upload-wrapper-form-content-title">
-          タイトルを入力
-          <input type="text" name="title" id="title_input" class="title-input">
+          <p class="upload-wrapper-form-content-title-text">タイトル<span class="upload-wrapper-form-content-title-span">[必須]</span></p>
+          <input type="text" name="title" id="title_input" class="upload-wrapper-form-content-title-input" placeholder="最大文字数20文字" >
+        </div>
+        <div class="select-box-wrapper">カテゴリーを入力
+          <select name="category_id" type="text" class="select-box-wrapper-select">
+            <option></option>
+            <option name="1" value="1">風景</option>
+            <option name="2" value="2"> 街並み</option>
+            <option name="3" value="3">人物</option> 
+          </select> 
         </div>
       </div>
       <div class="btns">
@@ -33,6 +42,10 @@
       </div>
     </form>
   </div>  
+
+
+
+
 @endsection 
 
 
