@@ -37,7 +37,7 @@ class ItemsController extends Controller
 
   public function new(Request $request){
     $item = $request->content;
-    //  eval(\Psy\sh());
+      //eval(\Psy\sh());
     if(Auth::check()){
       return view("items/new");
     }else{

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\UploadSizeCheckMiddleware;
+use Illuminate\Session\Middleware\StartSession;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

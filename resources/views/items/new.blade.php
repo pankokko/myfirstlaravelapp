@@ -12,8 +12,14 @@
     </div>
     <h2 class="upload-wrapper-text">
       <i class="fas fa-upload"></i>
+      {{-- 写真を投稿する --}}
+      @empty(session("message"))
       写真を投稿する
+      @else 
+      {{session("message")}}
+      @endempty
     </h2>
+
     <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
