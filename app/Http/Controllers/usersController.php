@@ -17,14 +17,6 @@ class UsersController extends Controller
   return view("users/show",compact("users"));
   }
 
-  public function search($category_id)
-  {
-    $category_id = $request->category_id;
-    eval(\Psy\sh());
-    $sort  = Item::find($category_id)->category->items;
-   
-    return redirect("/");
-  }
 
 
 }

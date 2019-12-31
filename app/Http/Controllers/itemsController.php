@@ -45,6 +45,20 @@ class ItemsController extends Controller
     }
   }
 
+  // public function sort(request $request)
+  //  {
+  //    return view("items/sort");
+  //  }
+
+  //  public function search(request $request)
+  //  {
+  //    $id = $request->category_id;
+  //   $check = Item::all()->find($id == "category_id");
+  //    eval(\Psy\sh());
+  //    $sort  = Item::find($id)->category->items;
+  //    return redirect("/");
+  //  }
+
   public function create(Request $request){
     if(Auth::check()){
     $user = Auth::user()->id;
@@ -52,7 +66,6 @@ class ItemsController extends Controller
     $path = $request->file('path')->store('public/temp');
     Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
     // eval(\Psy\sh());
-  
     }
     return redirect('/');
   }

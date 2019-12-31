@@ -2,6 +2,7 @@
 @section("title")
 新規投稿ページ
 @endsection
+@include("components/header")
 @section("content")
   <div class="upload-wrapper">
     <div class="upload-wrapper-bar">

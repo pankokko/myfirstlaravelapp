@@ -15,7 +15,7 @@
       </div>
     </div>
       <p class="discription">{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span>
-        @if(Auth::user()->id == $item->user->id)
+        @if(Auth::check() && Auth::user()->id == $item->user->id)
           <form action="/items/{{$item->id}}/destroy" method="post">
             @csrf
             {{ method_field('delete')}}
