@@ -18,7 +18,7 @@
     <p class="sign-up__wrapper-form-button-registrate">ログイン</p>    
     </button>
     </form>
-    <a class="login-btn" href="{{route("login")}}">
+    <a class="login-btn" href="{{route("register")}}">
       <p class="login-btn-textbox">または登録</p>
     </a>
   </div>

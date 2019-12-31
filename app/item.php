@@ -19,7 +19,8 @@ public function category(){
 public static $rules = array(
   'title' => 'required',
   'path' => 'required',
-   
+  'category_id' => 'required',
+  'user_id' => 'required'
 );
 
 }
