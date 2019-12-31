@@ -3,7 +3,11 @@
 @section("content")
 <div class="search">
   <div class="search-text">
+    @if($keyword != null)
     <p class="search-text-p"><span class="search-text-p-span">{{$keyword}}</span>の検索結果</p>
+    @else
+    <p class="search-text-p">キーワードを入力してください。</p>
+    @endif
   </div>
   <div class="search-pictures">
       @foreach ($query as $result)
