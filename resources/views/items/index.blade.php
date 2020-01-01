@@ -25,11 +25,11 @@
   </div>
   <div class="top-pictures">
     @foreach ($items as $item)
-    <div class="top-pictures-wrapper"> 
-      <a  class="top-pictures-wrapper-link" href="/items/{{$item->id}}/show">
-        <img class="top-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$item->path)}}"width="350" height="220px">
-      </a>
-    </div>
+      <div class="top-pictures-wrapper"> 
+        <a  class="top-pictures-wrapper-link" href="/items/{{$item->id}}/show">
+          <img class="top-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$item->path)}}"width="350" height="220px">
+        </a>
+      </div>
     @endforeach
   </div>
   @include("components/footer")

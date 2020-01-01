@@ -11,8 +11,8 @@ class ItemsController extends Controller
  
 
   public function index(request $request)
-  { 
-     $items =Item::all();
+  {  
+     $items =Item::all()->take(20);
      $randoms = Item::all()->random(1);
      return view("items/index",compact("items","randoms"));
   }
@@ -37,7 +37,7 @@ class ItemsController extends Controller
 
   public function new(Request $request){
     $item = $request->content;
-    //  eval(\Psy\sh());
+      //eval(\Psy\sh());
     if(Auth::check()){
       return view("items/new");
     }else{
@@ -61,24 +61,11 @@ class ItemsController extends Controller
 
   public function search(request $request)
   {
+  
     $keyword = $request->input("keyword");
     $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
       //eval(\Psy\sh());
     return view("items/search",compact("query","keyword"));
   }
-
-  //public function sort(request $request)
-  //  {
-  //    return view("items/sort");
-  //  }
-
-  //  public function search(request $request)
-  //  {
-  //    $id = $request->category_id;
-  //   $check = Item::all()->find($id == "category_id");
-  //    eval(\Psy\sh());
-  //    $sort  = Item::find($id)->category->items;
-  //    return redirect("/");
-  //  }
 
 }

@@ -19,7 +19,7 @@ class CategoriesTableSeeder extends Seeder
                 'updated_at'     => '2019-12-30-12:00:00'
             ],
             [
-                'name'           => '街並み',
+                'name'           => '建物',
                 'created_at'     => '2019-12-30-12:00:00',
                 'updated_at'     => '2019-12-30-12:00:00'
             ],
