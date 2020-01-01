@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 use Closure;
-use Illuminate\Http\Responce;
+
 class UploadSizeCheckMiddleware
       
 {
@@ -22,7 +22,7 @@ class UploadSizeCheckMiddleware
             
             if($post_max_size < $uploaded_size ){
                 //eval(\Psy\sh());
-                 return redirect('items/new')->with('message' ,"ファイルサイズが大きすぎます。");
+                return redirect('items/new')->with('message' ,"ファイルサイズが大きすぎます(最大18MB)");
             }
         }                
         return $next($request);
