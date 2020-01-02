@@ -12,7 +12,7 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
-     $items =Item::all()->take(20);
+     $items =Item::orderby("created_at" ,"desc")->take(15)->get();
      $randoms = Item::all()->random(1);
      return view("items/index",compact("items","randoms"));
   }
