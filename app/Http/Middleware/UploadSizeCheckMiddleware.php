@@ -16,12 +16,11 @@ class UploadSizeCheckMiddleware
     public function handle($request, Closure $next)
     {         
         if(isset($_SERVER['CONTENT_LENGTH'])){
-            
+            // eval(\Psy\sh());
             $post_max_size = $this->return_bytes(ini_get('post_max_size'));
             $uploaded_size = intval($_SERVER['CONTENT_LENGTH']);                          
             
             if($post_max_size < $uploaded_size ){
-                //eval(\Psy\sh());
                 return redirect('items/new')->with('message' ,"ファイルサイズが大きすぎます(最大18MB)");
             }
         }                

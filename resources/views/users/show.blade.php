@@ -10,7 +10,6 @@
       <div class="user-container-nav-list">
         <a class="ser-container-nav-list-link" href="#">写真一覧</a>
       </div>
-      
     </div>
   </div>
   <div class="user-pictures">
