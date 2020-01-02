@@ -12,6 +12,7 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
+     //eval(\Psy\sh());
      $items =Item::orderby("created_at" ,"desc")->take(15)->get();
      $randoms = Item::all()->random(1);
      return view("items/index",compact("items","randoms"));
@@ -45,19 +46,16 @@ class ItemsController extends Controller
     }
   }
 
-  
 
   public function create(Request $request){
     if(Auth::check()){
-    $user = Auth::user()->id;
     $this->validate($request, Item::$rules);
     $path = $request->file('path')->store('public/temp');
-    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' => $user ,'category_id' => $request->category_id]);
+    Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id]);
     // eval(\Psy\sh());
     }
     return redirect('/');
   }
-
 
   public function search(request $request)
   {

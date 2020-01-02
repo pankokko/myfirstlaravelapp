@@ -11,9 +11,7 @@ class UsersController extends Controller
 {
   public function show($id)
   {
-    $user = Auth::user();
     $users = User::with("items")->find(Auth::user()->id);
- 
   return view("users/show",compact("users"));
   }
 
