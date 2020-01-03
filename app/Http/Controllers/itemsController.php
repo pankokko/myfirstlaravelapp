@@ -52,20 +52,19 @@ class ItemsController extends Controller
   public function create(Request $request){
     if(Auth::check()){
       $this->validate($request, Item::$rules);
-      // $image =  $request->file('path');
-      // $filename = time() . '.' . $image->getClientOriginalName();
-      // $path = public_path('/storage/temp/'.$filename);
-      // Image::make($image)->resize(1616, 1000)->save($path);;
-      $path = $request->file('path')->store('public/temp');
-       //eval(\Psy\sh());
-      Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id]);
-    }
-    return redirect('/');
+        $image =  $request->file('path');
+        $filename = time() . '.' . $image->getClientOriginalName();
+        $path = public_path('/storage/temp/'.$filename);
+        Image::make($image)->resize(1616, 1000)->save($path);
+        //$path = $request->file('path')->store('public/temp');
+        //eval(\Psy\sh());
+        Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id]);
+     }
+        return redirect('/');
   }
 
   public function search(request $request)
   {
-  
     $keyword = $request->input("keyword");
     $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
       //eval(\Psy\sh());
