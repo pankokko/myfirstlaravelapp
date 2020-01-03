@@ -6043,6 +6043,7 @@ html {
 
 body {
   font-family: "Lucida Grande", Arial, Helvetica, serif;
+  width: 1425px;
 }
 
 /*
@@ -6386,6 +6387,7 @@ a {
 }
 
 .top-pictures {
+  width: 100%;
   margin: 5px auto;
   display: -webkit-box;
   display: flex;

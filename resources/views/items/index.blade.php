@@ -5,6 +5,7 @@
 @include("components/header")
 @section('content')
   <div class="pictures-wrapper">
+  @if($randoms)
     @foreach($randoms as $random)
     <div class="picture-wrapper_photo">
       <a href="items/{{$random->id}}/show">
@@ -12,6 +13,7 @@
       </a>
     </div> 
     @endforeach 
+  @endif
   </div>
   <div class="top-nav"> 
     <div class="top-nav-wrapper">
