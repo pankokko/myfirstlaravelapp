@@ -6,9 +6,8 @@
 <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-<main>
+<main class="wrapper">
   @yield('content')
 </main>
-
 </body>
 </html>
