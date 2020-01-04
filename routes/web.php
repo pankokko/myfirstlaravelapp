@@ -20,7 +20,8 @@ Route::delete('items/{id}/destroy', 'itemsController@destroy');
 Route::get("items/new","itemsController@new")->name("new");
 Route::post("items/new","itemsController@create");
 
-
+Route::get("albums/index","albumsController@index")->name("albums/index");
+Route::get("albums/new","albumsController@new")->name("albums/new");
 
 Auth::routes();
 Route::get("/logout","HomeController@logout");

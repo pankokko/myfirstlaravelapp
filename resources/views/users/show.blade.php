@@ -8,7 +8,7 @@
     <p class="user-container-name">{{Auth::user()->name}}</p>
     <div class="user-container-nav">
       <div class="user-container-nav-list">
-        <a class="ser-container-nav-list-link" href="#">写真一覧</a>
+        <a class="ser-container-nav-list-link" href="/albums/index">アルバム一覧</a>
       </div>
     </div>
   </div>

@@ -23,6 +23,12 @@ class User extends Authenticatable
         return $this->hasmany('App\Item');
     }
 
+
+    public function albums(){
+        return $this->hasmany('App\Album');
+      }
+      
+
     /**
      * The attributes that should be hidden for arrays.
      *

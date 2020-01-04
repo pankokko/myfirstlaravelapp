@@ -6492,6 +6492,7 @@ footer .pagetop-link-page-top {
 }
 
 .upload-wrapper-text {
+  font-size: 25px;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
   padding-top: 30px;
@@ -6837,5 +6838,173 @@ footer .pagetop-link-page-top {
 
 .user-pictures-wrapper {
   margin: 3px;
+}
+
+.album-nav {
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.album-nav-wrapper {
+  width: 97%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.album-nav-wrapper-list {
+  margin: 0 30px;
+  padding: 8px;
+  background: #f1f1f1;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-align: center;
+}
+
+.album-nav-wrapper-list-link {
+  font-size: 22px;
+  font-weight: bold;
+  color: #666;
+}
+
+.album-pictures {
+  width: 100%;
+  margin: 5px auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  flex-wrap: wrap;
+}
+
+.album-pictures-wrapper {
+  margin: 3px;
+  text-align: center;
+}
+
+.album-nav-wrapper-list:hover {
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
+.upload-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.upload-wrapper-bar {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 20px auto;
+  border: solid 1px #333;
+  border-radius: 2px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.upload-wrapper-bar-each {
+  padding: 10px;
+  width: 33.4%;
+  text-align: center;
+  border: 1px solid #666;
+}
+
+.upload-wrapper-text {
+  font-size: 25px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.upload-wrapper-form-content {
+  border: solid 1px #e5e5e5;
+  height: 370px;
+  padding: 20px;
+  position: relative;
+}
+
+.upload-wrapper-form-content-title {
+  width: 470px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  margin-left: 470px;
+  position: absolute;
+  top: 20;
+}
+
+.upload-wrapper-form-content-title-span {
+  color: red;
+}
+
+.upload-wrapper-form-content-title-input {
+  margin-left: 20px;
+  width: 250px;
+}
+
+.upload-wrapper-form-content-label {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  background: #666;
+  margin-top: 25px;
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.image-input {
+  display: none;
+}
+
+.btns-upload-btn {
+  margin-top: 40px;
+  color: #e5e5e5;
+  background: #ccc;
+  cursor: default;
+  font-size: 90%;
+  line-height: 150%;
+  font-weight: bold;
+  text-align: center;
+  width: 170px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: content-box;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.btns-upload-btn:hover {
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
+.select-box-wrapper {
+  margin-left: 470px;
+  position: absolute;
+  top: 65;
+}
+
+.select-box-wrapper-select {
+  width: 80px;
+}
+
+.upload-wrapper-form-content-text-caution {
+  color: red;
 }
 
