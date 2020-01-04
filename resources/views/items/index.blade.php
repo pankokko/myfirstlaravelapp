@@ -5,7 +5,7 @@
 @include("components/header")
 @section('content')
   <div class="pictures-wrapper">
-  @if($randoms)
+  @isset($randoms)
     @foreach($randoms as $random)
     <div class="picture-wrapper_photo">
       <a href="items/{{$random->id}}/show">
@@ -13,7 +13,7 @@
       </a>
     </div> 
     @endforeach 
-  @endif
+  @endisset
   </div>
   <div class="top-nav"> 
     <div class="top-nav-wrapper">
@@ -26,6 +26,7 @@
     </div>
   </div>
   <div class="top-pictures">
+    @isset($items)
     @foreach ($items as $item)
       <div class="top-pictures-wrapper"> 
         <a  class="top-pictures-wrapper-link" href="/items/{{$item->id}}/show">
@@ -33,6 +34,7 @@
         </a>
       </div>
     @endforeach
+    @endisset
   </div>
   @include("components/footer")
 @endsection

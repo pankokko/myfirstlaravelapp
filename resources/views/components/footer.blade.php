@@ -1,4 +1,3 @@
-@extends("layouts/default")
 <footer>
   <div class="pagetop">
     <a href="#" class="pagetop-link">
