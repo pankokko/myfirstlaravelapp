@@ -10,28 +10,18 @@
         <a class="album-nav-wrapper-list-link" href="#">アルバム一覧</a> 
       </div>
       <div class="album-nav-wrapper-list">
-        <a class="album-nav-wrapper-list-link" href="#">アルバムを作る</a> 
+        <a class="album-nav-wrapper-list-link" href="/albums/new">アルバムを作る</a> 
       </div>
     </div>
   </div>
 <div class="album-pictures">
+@foreach($albums as $album)
   <div class="album-pictures-wrapper"> 
     <a  class="album-pictures-wrapper-link" href="#">
-      <img class="album-pictures-wrapper-link-picture" src="{{asset('/storage/temp/1578018021.DSC00913.JPG')}}"width="350" height="220px">
-      <p class="album-pictures-wrapper-link-title">アルバム名 島根旅行 </p>
+      <img class="album-pictures-wrapper-link-picture" src="{{asset( '/storage/thumbnail/'. $album->thumbnail )}}"width="350" height="220px">
+      <p class="album-pictures-wrapper-link-title">{{$album->albumtitle}} </p>
     </a>
   </div>
-  <div class="album-pictures-wrapper"> 
-    <a  class="album-pictures-wrapper-link" href="#">
-      <img class="album-pictures-wrapper-link-picture" src="{{asset('/storage/temp/1578018021.DSC00913.JPG')}}"width="350" height="220px">
-      <p class="album-pictures-wrapper-link-title">アルバム名 島根旅行 </p>
-    </a>
-  </div>
-  <div class="album-pictures-wrapper"> 
-    <a  class="album-pictures-wrapper-link" href="#">
-      <img class="album-pictures-wrapper-link-picture" src="{{asset('/storage/temp/1578018021.DSC00913.JPG')}}"width="350" height="220px">
-      <p class="album-pictures-wrapper-link-title">アルバム名 島根旅行 </p>
-    </a>
-  </div>
+@endforeach
 </div>
 @endsection

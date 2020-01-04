@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Album extends Model
 {
-    protected $fillable = ['path','title','user_id','category_id'];
+    protected $fillable = ['description','albumtitle','user_id','thumbnail'];
 
 
 
@@ -14,5 +14,11 @@ class Album extends Model
         return $this->belongsTo('App\User');
       }
       
+
+public static $rules = array(
+  'albumtitle' => 'required',
+  'description' => 'required',
+  'thumbnail'
+);
 
 }

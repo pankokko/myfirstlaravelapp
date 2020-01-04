@@ -41,7 +41,6 @@
         </div>
       </div>
       <div class="btns">
-        <input class="btns-upload-btn" type="button" value="キャンセル">
         <input class="btns-upload-btn" type="submit" value="実行">
       </div>
     </form>

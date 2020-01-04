@@ -6930,6 +6930,19 @@ footer .pagetop-link-page-top {
   position: relative;
 }
 
+.upload-wrapper-form-content-description {
+  margin-left: 470px;
+}
+
+.upload-wrapper-form-content-description-span {
+  color: red;
+}
+
+.upload-wrapper-form-content-description-textarea {
+  width: 450px;
+  height: 80px;
+}
+
 .upload-wrapper-form-content-title {
   width: 470px;
   display: -webkit-box;

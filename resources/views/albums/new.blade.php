@@ -9,7 +9,7 @@
       <i class="fas fa-upload"></i>
        アルバムを作成する
     </h2>
-    <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
+    <form class="upload-wrapper-form" method="post" aciton="/albums/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
         @if(session("message"))
@@ -17,26 +17,20 @@
          @else 
         <p class="upload-wrapper-form-content-text">アルバムのサムネイルを選択してください</p>
          @endif 
-        {{-- <input type="hidden" name="fake" id="uploadType" value="default"> --}}
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
-          <input id="file_input" type="file" class="image-input" name="path">
+          <input id="file_input" type="file" class="image-input" name="thumbnail">
         </label>
         <div class="upload-wrapper-form-content-title">
           <p class="upload-wrapper-form-content-title-text">タイトル<span class="upload-wrapper-form-content-title-span">[必須]</span></p>
-          <input type="text" name="title" id="title_input" class="upload-wrapper-form-content-title-input" placeholder="最大文字数20文字" >
+          <input type="text" name="albumtitle" id="title_input" class="upload-wrapper-form-content-title-input">
         </div>
-        <div class="select-box-wrapper">カテゴリーを入力
-          <select name="category_id" type="text" class="select-box-wrapper-select">
-            <option></option>
-            <option name="1" value="1">風景</option>
-            <option name="2" value="2"> 建物</option>
-            <option name="3" value="3">人物</option> 
-          </select> 
+        <div class="upload-wrapper-form-content-description">
+           <p class="upload-wrapper-form-content-description-text">説明文<span class="upload-wrapper-form-content-description-span">[必須]</span></p>
+          <textarea type="text" name="description" id="description_input" class="upload-wrapper-form-content-description-textarea" ></textarea>
         </div>
       </div>
       <div class="btns">
-        <input class="btns-upload-btn" type="button" value="キャンセル">
         <input class="btns-upload-btn" type="submit" value="実行">
       </div>
     </form>
