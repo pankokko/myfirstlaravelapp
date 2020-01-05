@@ -21,7 +21,7 @@ class AlbumsController extends Controller
     {
         return view("albums/new");
     }
-    
+
    public function create(request $request)
    {
     if(Auth::check()){
@@ -35,5 +35,12 @@ class AlbumsController extends Controller
        }
           return redirect('/');
     }
+   
+    public function show($id)
+    {
+      $album =  Album::find($id);
+      return view("albums/show", compact("album"));
+    }
+
    }
 

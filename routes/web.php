@@ -22,6 +22,7 @@ Route::post("items/new","itemsController@create");
 
 Route::get("albums/index","albumsController@index")->name("albums/index");
 Route::get("albums/new","albumsController@new")->name("albums/new");
+Route::get("albums/{id}/show","albumsController@show")->name("albums/show");
 Route::post("albums/new","albumsController@create");
 
 Auth::routes();

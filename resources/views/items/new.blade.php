@@ -22,7 +22,6 @@
          @else 
         <p class="upload-wrapper-form-content-text">投稿する写真を選択してください</p>
          @endif 
-        {{-- <input type="hidden" name="fake" id="uploadType" value="default"> --}}
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
           <input id="file_input" type="file" class="image-input" name="path">
