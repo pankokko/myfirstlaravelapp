@@ -12,7 +12,7 @@ class AlbumsController extends Controller
 {
     public function index(request $request)
     {
-      $albums = Album::all();
+        $albums = Album::where("user_id", Auth::user()->id)->get();
         return view("albums/index" , compact("albums"));
     }
 
