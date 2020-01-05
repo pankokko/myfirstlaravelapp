@@ -34,6 +34,16 @@
       height:370px;
       padding:20px;
       position:relative;
+      &-description{
+        margin-left:470px;
+        &-span{
+          color:red;
+        }
+        &-textarea{
+          width:450px;
+          height:80px;
+        }
+      }
       &-title{
         width:470px;
         display:flex;

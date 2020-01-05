@@ -1,0 +1,38 @@
+.album-nav{
+  width:100%;
+  background: #f1f1f1;
+    &-wrapper{
+      width:97%;
+      margin:0 auto;  
+      display:flex;
+      justify-content:center;
+        &-list{
+         margin: 0 30px;
+         padding:8px;
+         background: #f1f1f1;
+         transition:all 0.1s; 
+         text-align:center;
+           &-link{
+             font-size:22px;
+             font-weight:bold;
+             color:$gray;
+          }
+        }
+    }
+}
+
+.album-pictures{
+  width:100%;
+  margin:5px auto;
+  display:flex;
+  justify-content:row;
+  flex-wrap:wrap;
+    &-wrapper{
+      margin:3px;
+      text-align:center;
+    }
+}
+
+.album-nav-wrapper-list:hover{
+background-color:rgba($gray, 0.5);
+}

@@ -1,4 +1,3 @@
-@extends("layouts.default")
 <header class="mainpage-header">
   <a href="{{route("/")}}">
   <h1 class="mainpage-header-logo">

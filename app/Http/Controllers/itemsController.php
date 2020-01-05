@@ -13,13 +13,16 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
-   
+     
      $items = Item::orderby("created_at" ,"desc")->take(15)->get();
-     $randoms = $items->random(1);
-       //eval(\Psy\sh());
+     $randoms = Item::inRandomOrder()->get()->take(1);
+     if($randoms != null){
      return view("items/index",compact("items","randoms"));
-   
-  }
+     }else{
+      return view("items/index"); 
+     }
+     }
+
 
   public function show($id)
   {
