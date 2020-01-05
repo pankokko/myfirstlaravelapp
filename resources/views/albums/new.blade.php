@@ -18,7 +18,7 @@
         <p class="upload-wrapper-form-content-text">アルバムのサムネイルを選択してください</p>
          @endif 
         <label class="upload-wrapper-form-content-label" for="file_input">
-          写真を選択
+          サムネイルを選択
           <input id="file_input" type="file" class="image-input" name="thumbnail">
         </label>
         <div class="upload-wrapper-form-content-title">

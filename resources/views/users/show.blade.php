@@ -14,7 +14,7 @@
   </div>
   <div class="user-pictures">
     @if(isset($users))
-       @foreach ($users->items as $user) 
+       @foreach ($users as $user) 
         <div class="user-pictures-wrapper"> 
             <a  class="top-pictures-wrapper-link"  href="/items/{{ $user->id }}/show">
             <img class="user-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$user->path)}}"  width="300" height="150px">

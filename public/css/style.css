@@ -6891,7 +6891,7 @@ footer .pagetop-link-page-top {
 .upload-wrapper {
   width: 1000px;
   margin: 0 auto;
-  border-bottom: 1px solid #666;
+  padding-bottom: 25px;
 }
 
 .upload-wrapper-bar {
@@ -6940,6 +6940,42 @@ footer .pagetop-link-page-top {
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
+}
+
+.upload-wrapper-form-content-album-link {
+  text-decoration: none;
+  color: white;
+}
+
+#back-btn {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  width: 110px;
+  background: #666;
+  margin-top: 0px;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.album-wrapper {
+  width: 100%;
+  margin: 5px auto;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+  border-top: 1px solid #666;
+  flex-wrap: wrap;
+}
+
+.album-wrapper-wrapper {
+  margin: 3px;
+  text-align: center;
 }
 
 .upload-wrapper {
