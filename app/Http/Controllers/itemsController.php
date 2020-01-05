@@ -9,13 +9,13 @@ use Intervention\Image\Facades\Image;
 require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 class ItemsController extends Controller
 {
- 
+
 
   public function index(request $request)
   {  
-     
-     $items = Item::orderby("created_at" ,"desc")->take(15)->get();
-     $randoms = Item::inRandomOrder()->get()->take(1);
+     $items = Item::wherenull("status")->orderby("created_at" ,"desc")->take(15)->get();
+       //eval(\Psy\sh());
+     $randoms = Item::where("status",null)->inRandomOrder()->get()->take(1);
      if($randoms != null){
      return view("items/index",compact("items","randoms"));
      }else{
@@ -27,9 +27,12 @@ class ItemsController extends Controller
   public function show($id)
   {
     $item = Item::find($id);
-    $items = Item::find($id)->user->items->reject($item)->take(3);
-     // eval(\Psy\sh());
-    return view("items/show",compact("item","user","items"));
+    $filtered = Item::find($id)->user->items->reject(function($values, $key){
+    return ($values['status'] == "onlyalbum"); 
+    });
+
+     $items = $filtered->reject($item)->take(3);
+    return view("items/show",compact("item","items"));
   }
 
   public function destroy($id)
@@ -55,13 +58,12 @@ class ItemsController extends Controller
   public function create(Request $request){
     if(Auth::check()){
       $this->validate($request, Item::$rules);
-        $image =  $request->file('path');
-        $filename = time() . '.' . $image->getClientOriginalName();
-        $path = public_path('/storage/temp/'.$filename);
-        Image::make($image)->resize(1616, 1000)->save($path);
-        //$path = $request->file('path')->store('public/temp');
-        //eval(\Psy\sh());
-        Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id]);
+      $image =  $request->file('path');
+      $filename = time() . '.' . $image->getClientOriginalName();
+      $path = public_path('/storage/temp/'.$filename);
+      Image::make($image)->resize(1616, 1000)->save($path);
+      //eval(\Psy\sh());
+      Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id ,"status" => $request->status]);
      }
         return redirect('/');
   }

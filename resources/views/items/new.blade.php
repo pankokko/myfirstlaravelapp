@@ -25,6 +25,7 @@
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
           <input id="file_input" type="file" class="image-input" name="path">
+          <input id="file_input" type="hidden" class="image-input" name="status" value="">
         </label>
         <div class="upload-wrapper-form-content-title">
           <p class="upload-wrapper-form-content-title-text">タイトル<span class="upload-wrapper-form-content-title-span">[必須]</span></p>

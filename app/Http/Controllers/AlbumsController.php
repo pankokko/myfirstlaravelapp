@@ -34,11 +34,11 @@ class AlbumsController extends Controller
             $filename = time() . '.' . $image->getClientOriginalName();
             $path = public_path('/storage/albumpic/'.$filename);
             Image::make($image)->resize(300, 300)->save($path);
-            Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id]);
+            Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id,'status'=> $request->status]);
             $item = Auth::user()->items->last();
              $album->items()->attach(["item_id" => $item->id ]);
            }
-              return redirect('/');
+              return redirect('albums/index');
         }
     
 
@@ -58,7 +58,7 @@ class AlbumsController extends Controller
           //eval(\Psy\sh());
           Album::create(['thumbnail' => basename($path),'albumtitle' => $request->albumtitle, 'user_id' =>  Auth::user()->id ,'description' => $request->description]);
        }
-          return redirect('/');
+          return redirect('albums/index');
     }
    
     public function show($id)
