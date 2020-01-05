@@ -15,6 +15,11 @@ class Album extends Model
       }
       
 
+    public function items()
+      {
+        return $this->belongsTomany('App\Item');
+      }
+
 public static $rules = array(
   'albumtitle' => 'required',
   'description' => 'required',
