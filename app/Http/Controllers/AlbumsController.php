@@ -54,7 +54,7 @@ class AlbumsController extends Controller
       $image =  $request->file('thumbnail');
       $filename = time() . '.' . $image->getClientOriginalName();
       $path = public_path('/storage/thumbnail/'.$filename);
-      Image::make($image)->resize(300, 300)->save($path);
+      Image::make($image)>resize(1616, 1000)->save($path);
       //eval(\Psy\sh());
       Album::create(['thumbnail' => basename($path),'albumtitle' => $request->albumtitle, 'user_id' =>  Auth::user()->id ,'description' => $request->description]);
     }
@@ -64,17 +64,20 @@ class AlbumsController extends Controller
     public function show($id)
     { 
       $album = Album::find($id);
-      $albums = Album::find($id)->items;
+      $albums = $album->items;
       //eval(\Psy\sh()); 
       return view("albums/show", compact("album","albums"));
     }
 
     public function detail($id)
     {      
-        $item = Item::wherenull("status")->get();
-    
-          eval(\Psy\sh()); 
-        return view("albums/detail");
+        //picture id●●のもつアルバム内の他の写真を表示する
+        $thisalbum = Item::find($id)->albums->first();
+        $album = Item::find($id);
+        //   eval(\Psy\sh()); 
+        $pictures = Item::find($id)->albums->first()->items->reject($album);
+          //eval(\Psy\sh()); 
+        return view("albums/detail",compact("album","pictures","thisalbum"));
     }
    }
 
