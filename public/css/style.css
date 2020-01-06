@@ -6799,10 +6799,14 @@ footer .pagetop-link-page-top {
 
 .user-container {
   position: relative;
-  padding-top: 10px;
   width: 100%;
   text-align: center;
   z-index: 1000;
+}
+
+.user-container-nickname {
+  margin-top: 30px;
+  width: 640px;
 }
 
 .user-container-name {
@@ -6978,6 +6982,11 @@ footer .pagetop-link-page-top {
   text-align: center;
 }
 
+.album-form {
+  float: right;
+  padding-top: 40px;
+}
+
 .upload-wrapper {
   width: 1000px;
   margin: 0 auto;
@@ -7109,5 +7118,66 @@ footer .pagetop-link-page-top {
 
 .upload-wrapper-form-content-text-caution {
   color: red;
+}
+
+.show-wrapper {
+  width: 1000px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+.show-wrapper a {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.show-wrapper .fa-trash {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: 13px;
+  color: #666;
+  float: right;
+  cursor: pointer;
+}
+
+.show-pictures {
+  margin: 5px auto;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: row;
+          justify-content: row;
+}
+
+.show-pictures-wrapper {
+  width: 33%;
+  margin: 3px;
+}
+
+.user-other-pics {
+  font-size: 1.25rem;
+  float: left;
+  font-weight: 500;
+  color: #666;
+}
+
+.other-pics-wrapper {
+  margin-top: 100px;
+}
+
+.discription {
+  margin-top: 8px;
+  color: #777777;
+  font-size: 23px;
+}
+
+.discription-text {
+  font-size: 16px;
+}
+
+#delete-input {
+  border: none;
+  cursor: pointer;
+  color: #666;
 }
 

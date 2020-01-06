@@ -13,9 +13,11 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
-     $items = Item::wherenull("status")->orderby("created_at" ,"desc")->take(15)->get();
+   ;
+        //eval(\Psy\sh());
+     $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
        //eval(\Psy\sh());
-     $randoms = Item::where("status",null)->inRandomOrder()->get()->take(1);
+     $randoms = Item::getNullStatus()->random(1);
      if($randoms != null){
      return view("items/index",compact("items","randoms"));
      }else{
@@ -26,12 +28,10 @@ class ItemsController extends Controller
 
   public function show($id)
   {
-    $item = Item::find($id);
-    $filtered = Item::find($id)->user->items->reject(function($values, $key){
-    return ($values['status'] == "onlyalbum"); 
-    });
 
-     $items = $filtered->reject($item)->take(3);
+    $item = Item::find($id);
+    $filteredNull =  Item::userGetNullStatus($id);
+     $items = $filteredNull->reject($item)->take(3);
     return view("items/show",compact("item","items"));
   }
 

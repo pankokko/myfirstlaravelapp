@@ -5,12 +5,17 @@
 @include("components/header")
 @section("content")
   <div class="user-container">
-    <p class="user-container-name">{{Auth::user()->name}}</p>
-    <div class="user-container-nav">
-      <div class="user-container-nav-list">
-        <a class="ser-container-nav-list-link" href="/albums/index">アルバム一覧</a>
-      </div>
+    <div class="album-nav"> 
+        <div class="album-nav-wrapper">
+          <div class="album-nav-wrapper-list">
+            <a class="album-nav-wrapper-list-link" href="/albums/index">アルバム一覧</a> 
+          </div>
+          <div class="album-nav-wrapper-list">
+            <a class="album-nav-wrapper-list-link" href="/albums/new">アルバムを作る</a> 
+          </div>
+        </div>
     </div>
+    <p class="user-container-nickname">{{Auth::user()->name}}さんの投稿写真一覧</p>
   </div>
   <div class="user-pictures">
     @if(isset($users))
