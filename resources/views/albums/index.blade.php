@@ -13,7 +13,7 @@
         <a class="album-nav-wrapper-list-link" href="/albums/new">アルバムを作る</a> 
       </div>
     </div>
-  </div>
+</div>
 <div class="album-pictures">
 @foreach($albums as $album)
   <div class="album-pictures-wrapper"> 

@@ -6799,10 +6799,14 @@ footer .pagetop-link-page-top {
 
 .user-container {
   position: relative;
-  padding-top: 10px;
   width: 100%;
   text-align: center;
   z-index: 1000;
+}
+
+.user-container-nickname {
+  margin-top: 30px;
+  width: 640px;
 }
 
 .user-container-name {
