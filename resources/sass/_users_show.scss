@@ -1,14 +1,9 @@
 .user-container{
-  position: relative;
-  // margin: -20px 0 20px 0;
   width: 100%;
   text-align:center;
-  z-index: 1000;
-  // background:$azuki;
   &-nickname{
    margin-top:30px;
    width:640px;
-   
   }
   &-name{
     color:$gray;

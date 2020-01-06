@@ -6798,10 +6798,8 @@ footer .pagetop-link-page-top {
 }
 
 .user-container {
-  position: relative;
   width: 100%;
   text-align: center;
-  z-index: 1000;
 }
 
 .user-container-nickname {
