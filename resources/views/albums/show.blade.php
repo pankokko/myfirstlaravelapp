@@ -11,6 +11,15 @@
       <label class="upload-wrapper-form-content-album" for="file_input">
         <a class="upload-wrapper-form-content-album-link" href="/albums/{{$album->id}}/add" > アルバムに写真を追加</a>
       </label>
+      @if(Auth::check() && Auth::user()->id == $album->user->id)
+          <form action="/albums/{{$album->id}}/destroy" method="post" class="album-form">
+            @csrf
+            {{ method_field('delete')}}
+            <i class="fas fa-trash">
+              <input id="delete-input" type="submit" value="このアルバムを削除">
+            </i>
+          </form>
+        @endif
       <div class="album-wrapper">
           @foreach($albums as $favorit)
             <div class="album-pictures-wrapper"> 

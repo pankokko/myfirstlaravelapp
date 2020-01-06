@@ -6978,6 +6978,11 @@ footer .pagetop-link-page-top {
   text-align: center;
 }
 
+.album-form {
+  float: right;
+  padding-top: 40px;
+}
+
 .upload-wrapper {
   width: 1000px;
   margin: 0 auto;
