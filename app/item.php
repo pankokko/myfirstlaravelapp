@@ -16,6 +16,25 @@ public function category(){
   return $this->belongsTo('App\Category');
 }
 
+public static function getNullStatus()
+{
+  $status = self::wherenull("status")->get();
+    // eval(\Psy\sh());
+    return $status;
+}
+
+public static function userGetNullStatus($id){
+
+  $filtered = self::find($id)->user->items->reject(function($values, $key){
+  
+    return ($values['status'] == "onlyalbum"); 
+      
+    });
+
+    return $filtered;
+
+ 
+}
 
 public function albums()
 {

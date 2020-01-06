@@ -14,7 +14,7 @@
       <div class="album-wrapper">
           @foreach($albums as $favorit)
             <div class="album-pictures-wrapper"> 
-              <a class="album-pictures-wrapper-link" href="/albums/{{$favorit->id}}/show" >
+              <a class="album-pictures-wrapper-link" href="/albums/{{$favorit->id}}/detail">
                 <img class="album-pictures-wrapper-link-picture" src="{{asset( '/storage/albumpic/'. $favorit->path )}}"width="350" height="220px">
                 <p class="album-pictures-wrapper-link-title">{{$favorit->title}} </p>
               </a>
