@@ -13,7 +13,6 @@ use App\Http\Middleware\FiltereMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/search","itemsController@search");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
