@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Album;
 use App\Item;
 
-require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
+// require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 class AlbumsController extends Controller
 {
     public function index(request $request)
