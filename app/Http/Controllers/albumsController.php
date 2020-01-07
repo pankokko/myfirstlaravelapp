@@ -14,14 +14,12 @@ class AlbumsController extends Controller
 {
     public function index(request $request)
     {
-         //eval(\Psy\sh());
         $albums = Album::where("user_id", Auth::user()->id)->get();
         return view("albums/index" , compact("albums"));
     }
 
     public function add(request $request)
     {
-         //eval(\Psy\sh());
         return view("albums/add");
     }
 
@@ -55,7 +53,6 @@ class AlbumsController extends Controller
       $filename = time() . '.' . $image->getClientOriginalName();
       $path = public_path('/storage/thumbnail/'.$filename);
       Image::make($image)->resize(300,300)->save($path);
-      //eval(\Psy\sh());
       Album::create(['thumbnail' => basename($path),'albumtitle' => $request->albumtitle, 'user_id' =>  Auth::user()->id ,'description' => $request->description]);
     }
       return redirect('albums/index');
@@ -65,7 +62,6 @@ class AlbumsController extends Controller
     { 
       $album = Album::find($id);
       $albums = $album->items;
-      //eval(\Psy\sh()); 
       return view("albums/show", compact("album","albums"));
     }
 
@@ -93,13 +89,13 @@ class AlbumsController extends Controller
   }
 
     public function detail($id)
-    {      
-        //picture id●●のもつアルバム内の他の写真を表示する
-        $thisalbum = Item::find($id)->albums->first();
-        $album = Item::find($id);
-        $pictures = Item::find($id)->albums->first()->items->reject($album);
-          //eval(\Psy\sh()); 
-        return view("albums/detail",compact("album","pictures","thisalbum"));
+  {      
+      $thisalbum = Item::find($id)->albums->first();
+      $album = Item::find($id);
+      $pictures = $thisalbum->items->reject($album);
+        //eval(\Psy\sh());
+    
+      return view("albums/detail",compact("album","pictures","thisalbum"));
     }
    }
 

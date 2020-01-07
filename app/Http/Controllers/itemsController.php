@@ -12,20 +12,18 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
-       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
-       //eval(\Psy\sh());
-       $collection  = $items;
-      if(!$collection->isEmpty()){
-       $randoms = $collection->random(1);
+      $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
+      //eval(\Psy\sh());
+      if(!$items->isEmpty()){
+      $randoms = $items->random(1);
        return view("items/index",compact("items","randoms"));
-       }else{
-        return view("items/index");
+      }else{
+      return view("items/index");
        }
      }
 
   public function show($id)
   {
-
     $item = Item::find($id);
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
@@ -43,8 +41,6 @@ class ItemsController extends Controller
   }
 
   public function new(Request $request){
-    $item = $request->content;
-      //eval(\Psy\sh());
     if(Auth::check()){
       return view("items/new");
     }else{
@@ -59,17 +55,15 @@ class ItemsController extends Controller
       $filename = time() . '.' . $image->getClientOriginalName();
       $path = public_path('/storage/temp/'.$filename);
       Image::make($image)->resize(1616, 1000)->save($path);
-      //eval(\Psy\sh());
       Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id ,"status" => $request->status]);
      }
-        return redirect('/');
+      return redirect('/');
   }
 
   public function search(request $request)
   {
     $keyword = $request->input("keyword");
     $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
-      //eval(\Psy\sh());
     return view("items/search",compact("query","keyword"));
   }
 

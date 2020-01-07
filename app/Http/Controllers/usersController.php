@@ -11,13 +11,10 @@ class UsersController extends Controller
 {
   public function show($id)
   {
-
-    // $users = User::with("items")->find(Auth::user()->id);
-   
     $item = Item::wherenull("status")->get();
     $users = $item->where("user_id",Auth::user()->id);
    // eval(\Psy\sh());
-  return view("users/show",compact("users"));
+    return view("users/show",compact("users"));
   }
 
 
