@@ -12,17 +12,16 @@ class ItemsController extends Controller
 
   public function index(request $request)
   {  
-   
-     $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
-     $randoms = Item::wherenull("status")->InRandomOrder(1);
+       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
        //eval(\Psy\sh());
-     if($randoms != null){
-     return view("items/index",compact("items","randoms"));
-     }else{
-      return view("items/index"); 
+       $collection  = $items;
+      if(!$collection->isEmpty()){
+       $randoms = $collection->random(1);
+       return view("items/index",compact("items","randoms"));
+       }else{
+        return view("items/index");
+       }
      }
-     }
-
 
   public function show($id)
   {
