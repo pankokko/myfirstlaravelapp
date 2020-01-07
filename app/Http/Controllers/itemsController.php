@@ -30,7 +30,7 @@ class ItemsController extends Controller
 
     $item = Item::find($id);
     $filteredNull =  Item::userGetNullStatus($id);
-     $items = $filteredNull->reject($item)->take(3);
+    $items = $filteredNull->reject($item)->take(3);
     return view("items/show",compact("item","items"));
   }
 
