@@ -10,7 +10,6 @@ require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/
 class ItemsController extends Controller
 {
 
-
   public function index(request $request)
   {  
    ;

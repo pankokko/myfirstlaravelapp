@@ -20,7 +20,7 @@ class FiltereMiddleware
         $response = $next($request);
         // $content = $response->content();
         $content = $response->getContent();
-         $data;
-         eval(\Psy\sh());
+        $data;
+        
     }
 }
