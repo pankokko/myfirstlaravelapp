@@ -5935,6 +5935,7 @@ readers do not read off random characters that represent icons */
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
+  margin-bottom: 25px;
 }
 
 .pagination {
@@ -6402,6 +6403,10 @@ a {
   margin-right: 40px;
 }
 
+.fa-camera {
+  margin-right: 4px;
+}
+
 .login-user-name {
   margin-top: 6px;
   margin-right: 40px;
@@ -6434,8 +6439,17 @@ a {
   position: relative;
 }
 
-.gnav li a {
-  background: #666;
+.gnav-user a {
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav-picture-category {
   color: #fff;
   display: block;
   height: 2rem;
@@ -6447,6 +6461,18 @@ a {
 
 .gnav-user-name {
   border-radius: 4px;
+  background: #666;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gnav-picture-category {
+  color: white;
 }
 
 .gnav li li {
@@ -6470,6 +6496,13 @@ a {
 .gnav-list-link {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .gnav-list-link:hover {

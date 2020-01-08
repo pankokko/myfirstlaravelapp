@@ -8,10 +8,13 @@
    <nav class="mainpage-header__nav">
      <div class="mainpage-header__nav-wrapper">
        <div class="mainpage-header__nav-wrapper-text">
-          <a href="#" > 
-          <i class="fas fa-camera"></i>
-          写真を見る
-          </a>
+         <ul class="gnav">
+            <li>
+              <a class="gnav-picture-category" href=""><i class="fas fa-camera"></i>写真を見る</a>
+            <ul>
+                <li class="gnav-list"><a class="gnav-list-link" href="/categories/index">カテゴリー</a></li>
+            </ul>
+         </ul>
        </div>
        <div class="mainpage-header__nav-wrapper-text">
           <a href="{{route("new")}}" > 
@@ -29,11 +32,10 @@
        @if(Auth::check())
         <div class="login-user-name">
           <ul class="gnav">
-            <li>
+            <li class="gnav-user">
               <a class="gnav-user-name" href="">{{Auth::user()->name}}</a>
               <ul>
                 <li class="gnav-list"><a class="gnav-list-link" href="/users/{{Auth::user()->id}}/show">マイページ</a></li>
-                {{-- <li class="gnav-list" ><a class="gnav-list-link" href="#">トップページ</a></li> --}}
              </ul>
         </div>
        @endif 
