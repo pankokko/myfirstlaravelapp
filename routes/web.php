@@ -30,6 +30,8 @@ Route::post("albums/new","albumsController@create");
 Route::delete('albums/{id}/destroy', 'albumsController@destroy');
 Route::delete('albums/{id}/remove', 'albumsController@remove');
 
+Route::get("categories/index","categoriesController@index");
+
 Auth::routes();
 Route::get("/logout","HomeController@logout");
 Route::get("users/{id}/show","usersController@show")->name("user/show");
