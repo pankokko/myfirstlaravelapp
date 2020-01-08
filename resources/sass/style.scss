@@ -9,6 +9,7 @@
 
 // Variables
 @import 'variables';
+@import "pagination";
 @import "show";
 @import "search";
 @import "reset";
@@ -25,6 +26,9 @@
 @import "albums_show";
 @import "albums_new";
 @import "albums_detail";
+@import "categories_index";
+@import "categories_list";
+
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
 

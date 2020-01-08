@@ -16,6 +16,11 @@ public function category(){
   return $this->belongsTo('App\Category');
 }
 
+public function albums()
+{
+  return $this->belongsTomany('App\Album');
+}
+
 public static function getNullStatus()
 {
   $status = self::wherenull("status")->get();
@@ -30,10 +35,6 @@ public static function userGetNullStatus($id){
     return $filtered;
 }
 
-public function albums()
-{
-  return $this->belongsTomany('App\Album');
-}
 
 public static $rules = array(
   'title' => 'required',

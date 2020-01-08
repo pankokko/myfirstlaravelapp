@@ -6,16 +6,16 @@
 @section("content")
   <div class="user-container">
     <div class="album-nav"> 
-        <div class="album-nav-wrapper">
-          <div class="album-nav-wrapper-list">
-            <a class="album-nav-wrapper-list-link" href="/albums/index">アルバム一覧</a> 
-          </div>
-          <div class="album-nav-wrapper-list">
-            <a class="album-nav-wrapper-list-link" href="/albums/new">アルバムを作る</a> 
-          </div>
+      <div class="album-nav-wrapper">
+        <div class="album-nav-wrapper-list">
+          <a class="album-nav-wrapper-list-link" href="/albums/index">アルバム一覧</a> 
         </div>
+        <div class="album-nav-wrapper-list">
+          <a class="album-nav-wrapper-list-link" href="/albums/new">アルバムを作る</a> 
+        </div>
+      </div>
     </div>
-    <p class="user-container-nickname">{{Auth::user()->name}}さんの投稿写真一覧</p>
+  <p class="user-container-nickname">{{Auth::user()->name}}さんの投稿写真一覧</p>
   </div>
   <div class="user-pictures">
     @if(isset($users))

@@ -28,6 +28,11 @@ class CategoriesTableSeeder extends Seeder
                 'created_at'     => '2019-12-30-12:00:00',
                 'updated_at'     => '2019-12-30-12:00:00'
             ],
+            [
+                'name'           => '生き物',
+                'created_at'     => '2019-12-30-12:00:00',
+                'updated_at'     => '2019-12-30-12:00:00'
+            ],
         ]);
 
 

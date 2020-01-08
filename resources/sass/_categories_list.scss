@@ -1,0 +1,30 @@
+.categories-container{
+  width: 1000px;
+  margin:0 auto;
+  &-wrapper{
+    padding-top:50px;
+    &-title{
+      padding-left:10px;
+      font-size:25px;
+      font-weight:bold;
+      border-left:6px solid #28a7e1;
+      &-text{
+        padding-top:20px;
+      }
+    }
+  }
+}
+
+
+
+
+.categories-pictures{
+  width:100%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: row;
+  flex-wrap: wrap;
+  &-wrapper{
+    margin:3px;
+  }
+}
