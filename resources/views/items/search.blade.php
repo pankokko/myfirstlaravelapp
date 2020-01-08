@@ -10,14 +10,13 @@
     @endif
   </div>
   <div class="search-pictures">
-      @foreach ($query as $result)
+    @foreach ($query as $result)
       <div class="search-pictures-wrapper"> 
         <a  class="search-pictures-wrapper-link" href="/items/{{$result->id}}/show">
           <img class="search-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$result->path)}}"width="350" height="220px">
         </a>
         <p class="search-pictures-wrapper-title">{{$result->title}}</p>
       </div>
-     
       @endforeach
   </div>
 </div>  

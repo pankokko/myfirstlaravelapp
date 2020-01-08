@@ -53,8 +53,10 @@ class ItemsController extends Controller
       $this->validate($request, Item::$rules);
       $image =  $request->file('path');
       $filename = time() . '.' . $image->getClientOriginalName();
+      $thumbnail = public_path('/storage/thumbnail/'.$filename);
       $path = public_path('/storage/temp/'.$filename);
-      Image::make($image)->resize(1616, 1000)->save($path);
+      Image::make($image)->resize(350, 220)->save($thumbnail);
+      Image::make($image)->resize(1000, 600)->save($path);
       Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id ,"status" => $request->status]);
      }
       return redirect('/');
@@ -63,8 +65,13 @@ class ItemsController extends Controller
   public function search(request $request)
   {
     $keyword = $request->input("keyword");
-    $query = Item::where('title', 'LIKE', "%{$keyword}%")->get();
-    return view("items/search",compact("query","keyword"));
-  }
+    $collection = Item::where('title', 'LIKE', "%{$keyword}%")->get();
+    $query = $collection->where('status',null);
+    // $getcategory = $request->category_id;
+    // $filtere_category = Item::where("category_id",$search)->get();
+    // $category = $filtere_category;
+      // eval(\Psy\sh());
+      return view("items/search",compact("query","keyword"));
 
+}
 }
