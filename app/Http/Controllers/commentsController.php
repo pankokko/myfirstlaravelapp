@@ -16,8 +16,11 @@ class CommentsController extends Controller
     $user = Auth::user()->id;
     $item_id  = $request->id;
     Comment::create(["comment" => $request->comment, "user_id" => $user, "item_id" => $item_id]);
+    return back();
+   }else{
+    return redirect("/register")->with('flash',"*投稿するにはログインか新規登録が必要です*");
    }
-   return back();
+ 
  }
 
  public function destroy($id)
