@@ -15,7 +15,14 @@ use App\Http\Middleware\FiltereMiddleware;
 */
 
 
-Route::post("comments/create","commentsController@create")->name("comments/create");
+
+
+
+
+
+Route::post("items/{id}/show", "commentsController@create")->name("items/{id}/show");
+Route::delete("comments/{id}/destroy", "commentsController@destroy")->name("comments/destroy");
+                                  
 
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/search","itemsController@search");
@@ -39,6 +46,7 @@ Route::get("categories/{id}/list","categoriesController@list")->name("categories
 
 
 Auth::routes();
+Route::post("comments/create", "commentsController@create")->name("comments/create");
 Route::get("/logout","HomeController@logout");
 Route::get("users/{id}/show","usersController@show")->name("user/show");
 Route::get('/home', 'HomeController@index')->name('home');

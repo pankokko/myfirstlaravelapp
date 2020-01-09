@@ -41,4 +41,4 @@ class UploadSizeCheckMiddleware
         if($unit == 'K') 
         return intval($_val) * 1024;
     }
-}
+} 
