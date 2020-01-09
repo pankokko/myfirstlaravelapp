@@ -8,13 +8,14 @@
    <nav class="mainpage-header__nav">
      <div class="mainpage-header__nav-wrapper">
        <div class="mainpage-header__nav-wrapper-text">
-         <ul class="gnav">
+          <a class="gnav-picture-category" href="/categories/index"><i class="fas fa-camera"></i>写真を見る</a>
+         {{-- <ul class="gnav">
             <li>
               <a class="gnav-picture-category" href=""><i class="fas fa-camera"></i>写真を見る</a>
             <ul>
                 <li class="gnav-list"><a class="gnav-list-link" href="/categories/index">カテゴリー</a></li>
             </ul>
-         </ul>
+         </ul> --}}
        </div>
        <div class="mainpage-header__nav-wrapper-text">
           <a href="{{route("new")}}" > 
