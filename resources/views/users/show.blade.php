@@ -21,9 +21,10 @@
     @if(isset($users))
        @foreach ($users as $user) 
         <div class="user-pictures-wrapper"> 
-            <a  class="top-pictures-wrapper-link"  href="/items/{{ $user->id }}/show">
+          <a  class="top-pictures-wrapper-link"  href="/items/{{ $user->id }}/show">
             <img class="user-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$user->path)}}"  width="300" height="150px">
           </a>
+          <p>{{$user->title}}</p>
         </div>
       @endforeach
     @else

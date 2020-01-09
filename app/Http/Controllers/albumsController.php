@@ -94,7 +94,6 @@ class AlbumsController extends Controller
       $album = Item::find($id);
       $pictures = $thisalbum->items->reject($album);
         //eval(\Psy\sh());
-    
       return view("albums/detail",compact("album","pictures","thisalbum"));
     }
    }

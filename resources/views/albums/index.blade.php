@@ -19,8 +19,8 @@
   <div class="album-pictures-wrapper"> 
     <a  class="album-pictures-wrapper-link" href="/albums/{{$album->id}}/show" >
       <img class="album-pictures-wrapper-link-picture" src="{{asset( '/storage/thumbnail/'. $album->thumbnail )}}"width="350" height="220px">
-      <p class="album-pictures-wrapper-link-title">{{$album->albumtitle}} </p>
     </a>
+    <p class="album-pictures-wrapper-link-title">{{$album->albumtitle}} </p>
   </div>
 @endforeach
 </div>
