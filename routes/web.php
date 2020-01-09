@@ -13,6 +13,17 @@ use App\Http\Middleware\FiltereMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+
+
+
+
+Route::post("items/{id}/show", "commentsController@create")->name("items/{id}/show");
+Route::delete("comments/{id}/destroy", "commentsController@destroy")->name("comments/destroy");
+                                  
+
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/search","itemsController@search");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
@@ -33,7 +44,9 @@ Route::delete('albums/{id}/remove', 'albumsController@remove');
 Route::get("categories/index","categoriesController@index")->name("categories/index");
 Route::get("categories/{id}/list","categoriesController@list")->name("categories/list");
 
+
 Auth::routes();
+Route::post("comments/create", "commentsController@create")->name("comments/create");
 Route::get("/logout","HomeController@logout");
 Route::get("users/{id}/show","usersController@show")->name("user/show");
 Route::get('/home', 'HomeController@index')->name('home');

@@ -5,11 +5,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Item;
+use App\Comment;
+use App\user;
 use Intervention\Image\Facades\Image;
 // require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 class ItemsController extends Controller
 {
-
+ 
   public function index(request $request)
   {  
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
@@ -27,7 +29,12 @@ class ItemsController extends Controller
     $item = Item::find($id);
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
-    return view("items/show",compact("item","items"));
+    $comments = Item::find($id)->comments;
+    $usercomments = Item::find($id)->user->comments->where("item_id", $id);
+
+     //eval(\psy\Sh());
+
+    return view("items/show",compact("item","items","comments"));
   }
 
   public function destroy($id)
@@ -67,11 +74,8 @@ class ItemsController extends Controller
     $keyword = $request->input("keyword");
     $collection = Item::where('title', 'LIKE', "%{$keyword}%")->get();
     $query = $collection->where('status',null);
-    // $getcategory = $request->category_id;
-    // $filtere_category = Item::where("category_id",$search)->get();
-    // $category = $filtere_category;
-      // eval(\Psy\sh());
+    // eval(\Psy\sh());
       return view("items/search",compact("query","keyword"));
-
 }
+
 }

@@ -1,11 +1,11 @@
 .show-wrapper{
   width:1000px;
   margin: 30px auto 0 auto ;
-  text-align:center;
-  a{
-    width:100%;
-    margin: 0 auto;
-  }
+  // text-align:center;
+  // a{
+  //   // width:100%;
+  //   // margin: 0 auto;
+  // }
 .fa-trash{
   margin-bottom:20px;
   margin-right:10px;
@@ -38,14 +38,6 @@
   margin-top:100px;
 }
 
-.discription{
-  margin-top:8px;
-  color:$lightgray;
-  font-size:23px;
-  &-text{
-    font-size:16px;
-  }
-}
 
 #delete-input{
   border:none;

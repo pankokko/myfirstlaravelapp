@@ -6032,12 +6032,6 @@ readers do not read off random characters that represent icons */
 .show-wrapper {
   width: 1000px;
   margin: 30px auto 0 auto;
-  text-align: center;
-}
-
-.show-wrapper a {
-  width: 100%;
-  margin: 0 auto;
 }
 
 .show-wrapper .fa-trash {
@@ -6076,6 +6070,9 @@ readers do not read off random characters that represent icons */
 
 .discription {
   margin-top: 8px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
   color: #777777;
   font-size: 23px;
 }
@@ -7312,12 +7309,6 @@ footer .pagetop-link-page-top {
 .show-wrapper {
   width: 1000px;
   margin: 30px auto 0 auto;
-  text-align: center;
-}
-
-.show-wrapper a {
-  width: 100%;
-  margin: 0 auto;
 }
 
 .show-wrapper .fa-trash {
@@ -7352,16 +7343,6 @@ footer .pagetop-link-page-top {
 
 .other-pics-wrapper {
   margin-top: 100px;
-}
-
-.discription {
-  margin-top: 8px;
-  color: #777777;
-  font-size: 23px;
-}
-
-.discription-text {
-  font-size: 16px;
 }
 
 #delete-input {
@@ -7441,5 +7422,96 @@ footer .pagetop-link-page-top {
 
 .categories-pictures-wrapper {
   margin: 3px;
+}
+
+.comment-wrapper {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.comment-wrapper-user {
+  position: relative;
+  padding: 0 50px 50px;
+}
+
+.comment-wrapper-user-date {
+  color: #999;
+  font-size: 80%;
+  margin-top: 7px;
+  display: block;
+}
+
+.comment-wrapper-user-name {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.comment-wrapper-user-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.comment-wrapper-user-text {
+  font-size: 15px;
+}
+
+.comment-wrapper-comment {
+  font-size: 110%;
+  line-height: 100%;
+  color: #fff;
+  background: #666;
+  padding: 7px;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.comment-wrapper-form-content-description-textarea {
+  background: #e6e6e6;
+  height: 100px;
+  width: 600px;
+}
+
+.discription-formtag {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 300px;
+  margin-left: 850px;
+  padding-bottom: 50px;
+}
+
+.comment-wrapper-user-date {
+  margin-top: 10px;
+  position: relative;
+}
+
+.comment-delete {
+  position: absolute;
+  top: 0;
+  left: 170px;
+}
+
+.btns-comment-btn {
+  margin-top: 15px;
+  color: #e5e5e5;
+  background: #6cb2eb;
+  cursor: default;
+  font-size: 90%;
+  line-height: 150%;
+  font-weight: bold;
+  text-align: center;
+  width: 90px;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: content-box;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 

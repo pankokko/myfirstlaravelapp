@@ -1,11 +1,11 @@
-.show-wrapper{
+.show-wrapper {
   width:1000px;
   margin: 30px auto 0 auto ;
-  text-align:center;
-  a{
-    width:100%;
-    margin: 0 auto;
-  }
+  // text-align:center;
+  // a{
+  //   width:100%;
+  //   margin: 0 auto;
+  // }
 .fa-trash{
   margin-bottom:20px;
   margin-right:10px;
@@ -40,6 +40,9 @@
 
 .discription{
   margin-top:8px;
+  text-align:center;
+  position:relative;
+  margin-bottom:50px;
   color:$lightgray;
   font-size:23px;
   &-text{
