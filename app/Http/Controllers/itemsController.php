@@ -67,11 +67,8 @@ class ItemsController extends Controller
     $keyword = $request->input("keyword");
     $collection = Item::where('title', 'LIKE', "%{$keyword}%")->get();
     $query = $collection->where('status',null);
-    // $getcategory = $request->category_id;
-    // $filtere_category = Item::where("category_id",$search)->get();
-    // $category = $filtere_category;
-      // eval(\Psy\sh());
+    // eval(\Psy\sh());
       return view("items/search",compact("query","keyword"));
-
 }
+
 }

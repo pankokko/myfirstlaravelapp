@@ -42,7 +42,7 @@ class AlbumsController extends Controller
 
     public function new(request $request)
     {
-        return view("albums/new");
+      return view("albums/new");
     }
 
    public function create(request $request)

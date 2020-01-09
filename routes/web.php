@@ -13,6 +13,10 @@ use App\Http\Middleware\FiltereMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::post("comments/create","commentsController@create")->name("comments/create");
+
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/search","itemsController@search");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
@@ -32,6 +36,7 @@ Route::delete('albums/{id}/remove', 'albumsController@remove');
 
 Route::get("categories/index","categoriesController@index")->name("categories/index");
 Route::get("categories/{id}/list","categoriesController@list")->name("categories/list");
+
 
 Auth::routes();
 Route::get("/logout","HomeController@logout");
