@@ -14,13 +14,13 @@ class AlbumsController extends Controller
 {
     public function index(request $request)
     {
-        $albums = Album::where("user_id", Auth::user()->id)->get();
+      $albums = Album::where("user_id", Auth::user()->id)->get();
         return view("albums/index" , compact("albums"));
     }
 
     public function add(request $request)
     {
-        return view("albums/add");
+      return view("albums/add");
     }
 
     public function store(request $request)
@@ -90,7 +90,7 @@ class AlbumsController extends Controller
 
     public function detail($id)
   {      
-      $thisalbum = Item::find($id)->albums->first();
+      $thisalbum = Item::find($id)->albums()->first();
       $album = Item::find($id);
       $pictures = $thisalbum->items->reject($album);
         //eval(\Psy\sh());
