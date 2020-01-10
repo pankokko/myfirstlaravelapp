@@ -14,7 +14,7 @@ class AlbumsController extends Controller
 {
     public function index(request $request)
     {
-      $albums = Album::where("user_id", Auth::user()->id)->get();
+      $albums = Album::where("user_id", Auth::id())->get();
         return view("albums/index" , compact("albums"));
     }
 
@@ -81,7 +81,7 @@ class AlbumsController extends Controller
   public function remove($id)
   {
     $item = Item::findOrFail($id);
-    if(Auth::user()->id  == $item->user_id){ 
+    if(Auth::id() == $item->user_id){ 
     Storage::delete('public/albumpic/'.$item->path);
     $item->delete();
     }

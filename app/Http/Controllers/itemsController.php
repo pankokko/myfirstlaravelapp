@@ -11,7 +11,7 @@ use Intervention\Image\Facades\Image;
 // require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 class ItemsController extends Controller
 {
- 
+
   public function index(request $request)
   {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
@@ -74,5 +74,6 @@ class ItemsController extends Controller
     // eval(\Psy\sh());
       return view("items/search",compact("query","keyword"));
 }
+
 
 }

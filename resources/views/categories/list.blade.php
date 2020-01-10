@@ -39,7 +39,6 @@
         </a>
       </div>
     @endforeach
-   
   @else
     <p>何もありません</p>
   @endif

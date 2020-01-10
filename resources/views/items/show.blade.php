@@ -15,7 +15,7 @@
     </div>
   </div>
     <div class="discription"><p>{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span></p>
-      @if(Auth::check() && Auth::user()->id == $item->user->id)
+      @if(Auth::id() == $item->user->id)
       <div class="discription-formtag">
         <form action="/items/{{$item->id}}/destroy" method="post">
           @csrf
@@ -38,7 +38,7 @@
       <p class="comment-wrapper-user-text">{{$comment->comment}}</p>
         <div  class="comment-wrapper-user-date">
           <span class="comment-wrapper-user-date-timedate">{{$comment->created_at}}
-          @if(Auth::check() && Auth::user()->id == $comment->user_id)
+          @if(Auth::id() == $comment->user_id)
           <form action="/comments/{{$comment->id}}/destroy" class="comment-delete" method="post">
             @csrf
             {{ method_field('delete')}}

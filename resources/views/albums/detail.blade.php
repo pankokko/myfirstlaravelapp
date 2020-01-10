@@ -18,7 +18,7 @@
       </div>
     </div>
       <p class="discription">{{$album->title}}<span class="discription-text"> taken by {{$album->user->name}}</span>
-        @if(Auth::check() && Auth::user()->id == $album->user->id)
+        @if(Auth::id() == $album->user->id)
           <form action="/albums/{{$album->id}}/remove" method="post">
             @csrf
             {{ method_field('delete')}}
