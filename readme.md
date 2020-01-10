@@ -51,3 +51,8 @@
 
 <img width="1425" alt="スクリーンショット 2020-01-10 15 43 13" src="https://user-images.githubusercontent.com/56859984/72132345-0b088080-33c2-11ea-84f3-de153d559508.png">
 
+<h2>カテゴリー一覧</h2>
+<p>ヘッダー左上の写真を見るを選択するとカテゴリーにマッチした写真を一覧表示するページへとジャンプします。</p>
+
+<img width="1438" alt="スクリーンショット 2020-01-10 16 25 56" src="https://user-images.githubusercontent.com/56859984/72133950-0645cb80-33c6-11ea-9ed6-22f5fcc2017d.png">
+
