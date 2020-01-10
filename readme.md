@@ -14,4 +14,5 @@
 
 <p>トップページ</p>
 
-"https://gyazo.com/688818b306bc634226571b5caf5dc1cb" 
+![スクリーンショット 2020-01-10 15 12 27](https://user-images.githubusercontent.com/56859984/72130193-15278080-33bc-11ea-9303-89e788ce9ddd.png)
+
