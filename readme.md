@@ -26,6 +26,11 @@
 
 <img width="1454" alt="スクリーンショット 2020-01-10 15 25 04" src="https://user-images.githubusercontent.com/56859984/72131638-368a6b80-33c0-11ea-8fde-419083ec9d2e.png">
 
+<p>18Mを超える場合はエラーが表示される</p>
+
+<img width="1339" alt="スクリーンショット 2020-01-10 16 21 10" src="https://user-images.githubusercontent.com/56859984/72133664-5c663f00-33c5-11ea-8119-070f207ebe82.png">
+
+
 <h2>詳細ページ</h2>
 <p>ページ内にあるコメント欄からコメントを投稿する事ができます。</p>
 
