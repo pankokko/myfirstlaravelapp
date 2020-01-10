@@ -14,5 +14,5 @@
 
 <p>トップページ</p>
 
-![スクリーンショット 2020-01-10 15 12 27](https://user-images.githubusercontent.com/56859984/72130193-15278080-33bc-11ea-9303-89e788ce9ddd.png)
+<img src="(https://user-images.githubusercontent.com/56859984/72130193-15278080-33bc-11ea-9303-89e788ce9ddd.png)">
 
