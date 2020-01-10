@@ -31,3 +31,8 @@
 
 <img width="1449" alt="スクリーンショット 2020-01-10 15 40 44" src="https://user-images.githubusercontent.com/56859984/72131930-0b544c00-33c1-11ea-9b6c-b9c33239c0c2.png">
 
+<p>アルバム名「紅葉」の中身</p>
+
+
+<img width="1425" alt="スクリーンショット 2020-01-10 15 43 13" src="https://user-images.githubusercontent.com/56859984/72132345-0b088080-33c2-11ea-84f3-de153d559508.png">
+
