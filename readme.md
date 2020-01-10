@@ -12,7 +12,9 @@
 
 <h1>Usage</h1>
 
+<p>以下のアドレスからトップページへアクセス可能です.</p>
 <p>トップページ</p>
+<p>http://3.137.8.223/</p>
 
 <img src="https://user-images.githubusercontent.com/56859984/72130193-15278080-33bc-11ea-9303-89e788ce9ddd.png">
 
