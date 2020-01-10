@@ -31,7 +31,7 @@
 
 <img width="1442" alt="スクリーンショット 2020-01-10 16 04 23" src="https://user-images.githubusercontent.com/56859984/72132819-40619e00-33c3-11ea-9456-74996a41b695.png">
 
-
+<img width="915" alt="スクリーンショット 2020-01-10 16 05 12" src="https://user-images.githubusercontent.com/56859984/72132830-4bb4c980-33c3-11ea-83f4-00af54f769eb.png">
 
 <h2>アルバム機能</h2>
 <p>ヘッダーにあるユーザー名を選択すると表示される<br>「アルバム一覧」と「アルバムを作る」の項目から自身のアルバムを作成と閲覧可能です。</p>
