@@ -7429,6 +7429,11 @@ footer .pagetop-link-page-top {
   width: 600px;
 }
 
+.comment-wrapper-comment-count {
+  font-weight: normal;
+  font-size: 14px;
+}
+
 .comment-wrapper-user {
   position: relative;
   padding: 0 50px 50px;

@@ -1,6 +1,10 @@
 .comment-wrapper{
   margin: 0 auto;
   width:600px;
+  &-comment-count{
+    font-weight:normal;
+    font-size:14px;
+  }
   &-user{
     position:relative;
     padding: 0 50px 50px;

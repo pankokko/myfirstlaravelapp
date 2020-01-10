@@ -13,7 +13,7 @@ class ItemsController extends Controller
 {
  
   public function index(request $request)
-  {  
+  {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
       //eval(\Psy\sh());
       if(!$items->isEmpty()){
@@ -30,10 +30,7 @@ class ItemsController extends Controller
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;
-    $usercomments = Item::find($id)->user->comments->where("item_id", $id);
-
      //eval(\psy\Sh());
-
     return view("items/show",compact("item","items","comments"));
   }
 
