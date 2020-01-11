@@ -1,5 +1,8 @@
 @extends("layouts/default")
 @include("components/header")
+@section("title")
+{{$item->title}}
+@endsection
 @section("content")
 <div class="show-wrapper">
   <a href="#modal-01">
@@ -58,7 +61,7 @@
       @foreach($comments as $comment)
       <div class="comment-wrapper-user">
         <a class="comment-wrapper-user-link">
-          <img src="http://get.secret.jp/pt/file/1578535787.JPG"width="40" height="40">
+          <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="40" height="40">
         </a>
         <p class="comment-wrapper-user-name"><a class="comment-wrapper-user-name-link">{{$comment->user->name}}</a></p>
       <p class="comment-wrapper-user-text">{{$comment->comment}}</p>

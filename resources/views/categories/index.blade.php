@@ -1,5 +1,8 @@
 @extends("layouts/default")
 @include("components/header")
+@section("title")
+カテゴリー一覧
+@endsection
 @section("content")
 <div class="album-nav"> 
     <div class="album-nav-wrapper">

@@ -22,6 +22,10 @@
         <input class="sign-up__wrapper-form-box__input" type="password" name="password"  placeholder="Password">
         <div class="under-bar"></div>
       </div>
+      <div class="sign-up__wrapper-form-box">
+        <input id="password-confirm" class="sign-up__wrapper-form-box__input" placeholder="Typeagain" type="password" class="input-control" name="password_confirmation" required autocomplete="new-password">
+        <div class="under-bar"></div>
+      </div>
       <button class="sign-up__wrapper-form-button"type="submit">
       <p class="sign-up__wrapper-form-button-registrate">登録</p>    
       </button>

@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section("title")
-インデックスページ
+カテゴリー写真一覧
 @endsection
 @include("components/header")
 @section('content')

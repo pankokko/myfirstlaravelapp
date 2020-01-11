@@ -38,6 +38,11 @@
               <ul>
                 <li class="gnav-list"><a class="gnav-list-link" href="/users/{{Auth::user()->id}}/show">マイページ</a></li>
              </ul>
+              <ul>
+                <li class="gnav-list"><a class="gnav-list-link" href="/albums/index">アルバム</a></li>
+             </ul>
+            </li>
+          </ul>
         </div>
        @endif 
        <div class="mainpage-header__nav-right-wrapper-login" >
