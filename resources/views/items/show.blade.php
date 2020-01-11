@@ -15,6 +15,32 @@
     </div>
   </div>
     <div class="discription"><p>{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span></p>
+      @if(Auth::check() != true)
+        <button type="submit" disable="true">
+          <i class="fas fa-thumbs-up"></i>
+          Like {{ $item->likes_count }}
+        </button>
+      @endif
+      @if (Auth::check())
+      @if ($like)
+        <form class="likes-form" action="/items/{{$item->id}}/show/likes/{{$like->id}}" method="post">
+          @csrf 
+          {{method_field("delete")}}
+          <button type="submit">
+            <i class="fas fa-thumbs-up"></i>
+            Like {{ $item->likes_count }}
+          </button>
+        </form>
+      @else
+       <form class="likes-form" action="/items/{{$item->id}}/show/likes" method="post">
+        @csrf
+          <button type="submit">
+            <i class="fas fa-thumbs-up"></i>
+            Like {{ $item->likes_count }}
+          </button>
+      </form>
+      @endif
+      @endif
       @if(Auth::id() == $item->user->id)
       <div class="discription-formtag">
         <form action="/items/{{$item->id}}/destroy" method="post">

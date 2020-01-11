@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Item extends Model
 {
@@ -25,6 +26,18 @@ public function albums()
 {
   return $this->belongsTomany('App\Album');
 }
+
+public function likes()
+{
+  return $this->hasMany('App\Like');
+}
+
+public function like_by()
+{
+  return Like::where('user_id', Auth::id())->first();
+}
+
+
 
 public static function getNullStatus()
 {

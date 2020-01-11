@@ -32,6 +32,10 @@ class User extends Authenticatable
         return $this->hasmany('App\Album');
       }
       
+      public function likes()
+      {
+        return $this->hasMany('App\Like');
+      }
 
     /**
      * The attributes that should be hidden for arrays.
