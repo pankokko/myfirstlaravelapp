@@ -28,19 +28,18 @@ class ItemsController extends Controller
   {
   
     $item = Item::find($id);
-    $like = $item->likes()->where('user_id', Auth::id())->first();
-
+    $user_like = $item->likes()->where('user_id', Auth::id())->first();
+    //eval(\Psy\Sh());
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;
-     //eval(\psy\Sh());
-    return view("items/show",compact("item","items","comments","like"));
+    return view("items/show",compact("item","items","comments","user_like"));
   }
 
   public function destroy($id)
   {
     $item = Item::findOrFail($id);
-    if(Auth::user()->id  == $item->user_id){ 
+    if(Auth::id()  == $item->user_id){ 
     Storage::delete('public/temp/'.$item->path);
     $item->delete();
     }
@@ -64,7 +63,7 @@ class ItemsController extends Controller
       $path = public_path('/storage/temp/'.$filename);
       Image::make($image)->resize(350, 220)->save($thumbnail);
       Image::make($image)->resize(1000, 600)->save($path);
-      Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::user()->id ,'category_id' => $request->category_id ,"status" => $request->status]);
+      Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::id() ,'category_id' => $request->category_id ,"status" => $request->status]);
      }
       return redirect('/');
   }

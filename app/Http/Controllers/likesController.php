@@ -11,16 +11,16 @@ use App\Item;
 class likesController extends Controller
 {
 
-    public function store(Request $request, $id)
+    public function store(Request $request, $itemId)
     {  
-        // eval(\Psy\Sh());
-        Like::create(['user_id' => Auth::user()->id,'item_id' => $id]);
+         //eval(\Psy\Sh());
+        Like::create(['user_id' => Auth::user()->id,'item_id' => $itemId]);
         // $item = Item::findOrFail($id);
         return back();
     }
 
-    public function destroy($id, $likeId) {
-      $item = Item::findOrFail($id);
+    public function destroy($itemId, $likeId) {
+      $item = Item::findOrFail($itemId);
       $item->like_by()->findOrFail($likeId)->delete();
       return back();
     }

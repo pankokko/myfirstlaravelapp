@@ -22,8 +22,8 @@
         </button>
       @endif
       @if (Auth::check())
-      @if ($like)
-        <form class="likes-form" action="/items/{{$item->id}}/show/likes/{{$like->id}}" method="post">
+      @if ($user_like)
+        <form class="likes-form" action="/items/{{$item->id}}/show/likes/{{$user_like->id}}" method="post">
           @csrf 
           {{method_field("delete")}}
           <button type="submit">

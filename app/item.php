@@ -37,8 +37,6 @@ public function like_by()
   return Like::where('user_id', Auth::id())->first();
 }
 
-
-
 public static function getNullStatus()
 {
   $status = self::wherenull("status")->get();
@@ -52,7 +50,6 @@ public static function userGetNullStatus($id){
     });
     return $filtered;
 }
-
 
 public static $rules = array(
   'title' => 'required',
