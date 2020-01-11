@@ -12,6 +12,13 @@ use Intervention\Image\Facades\Image;
 class ItemsController extends Controller
 {
 
+
+  public function __construct()
+  {
+      $this->middleware('auth')
+      ->except(['index','show','search']);
+  }
+
   public function index(request $request)
   {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);

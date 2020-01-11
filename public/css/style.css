@@ -6997,6 +6997,13 @@ footer .pagetop-link-page-top {
 .user-container-nickname {
   margin-top: 30px;
   width: 640px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user-container-nickname-text {
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .user-container-name {
@@ -7032,6 +7039,10 @@ footer .pagetop-link-page-top {
 
 .user-pictures-wrapper {
   margin: 3px;
+}
+
+.user-pictures-wrapper-title {
+  text-align: center;
 }
 
 .album-nav {
@@ -7108,11 +7119,22 @@ footer .pagetop-link-page-top {
   border: 1px solid #666;
 }
 
+.upload-wrapper-albumtitle {
+  width: 450px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 6px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .upload-wrapper-title {
+  text-align: center;
   font-size: 17px;
-  padding-top: 30px;
+  padding-top: 8px;
   padding-bottom: 10px;
-  margin-top: 25px;
 }
 
 .upload-wrapper-form-content {

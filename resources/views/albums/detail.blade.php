@@ -1,7 +1,7 @@
 @extends("layouts/default")
 @include("components/header")
 @section("title")
-詳細ページ
+{{$album->title}}
 @endsection
 @section("content")
 <div class="show-wrapper">

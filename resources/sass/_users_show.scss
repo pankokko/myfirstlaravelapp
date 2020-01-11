@@ -4,6 +4,12 @@
   &-nickname{
    margin-top:30px;
    width:640px;
+   font-weight:bold;
+   font-size:20px;
+   &-text{
+     font-weight:normal;
+     font-size:14px;
+   }
   }
   &-name{
     color:$gray;
@@ -34,5 +40,8 @@
   flex-wrap: wrap;
   &-wrapper{
     margin:3px;
+    &-title{
+     text-align:center;
+    }
   }
 }

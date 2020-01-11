@@ -1,7 +1,11 @@
 @extends("layouts/default")
 @include("components/header")
+@section("title")
+アルバム詳細ページ
+@endsection
 @section("content")
 <div class="upload-wrapper">
+<h1 class="upload-wrapper-albumtitle">{{$album->albumtitle}}</h1>
   <p class="upload-wrapper-title">
     {{$album->description}}
   </p>

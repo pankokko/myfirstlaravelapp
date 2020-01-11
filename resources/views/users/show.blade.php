@@ -15,7 +15,8 @@
         </div>
       </div>
     </div>
-  <p class="user-container-nickname">{{Auth::user()->name}}さんの投稿写真一覧</p>
+  <p class="user-container-nickname">{{Auth::user()->name}}<span class="user-container-nickname-text">さんの投稿写真一覧</span></p>
+
   </div>
   <div class="user-pictures">
     @if(isset($users))
@@ -24,7 +25,7 @@
           <a  class="top-pictures-wrapper-link"  href="/items/{{ $user->id }}/show">
             <img class="user-pictures-wrapper-picture" src="{{asset('/storage/temp/'.$user->path)}}"  width="300" height="150px">
           </a>
-          <p>{{$user->title}}</p>
+          <p class="user-pictures-wrapper-title" >{{$user->title}}</p>
         </div>
       @endforeach
     @else
