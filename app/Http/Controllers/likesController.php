@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Like;
 use App\Item;
 
-
-
 class likesController extends Controller
 {
 
@@ -24,7 +22,6 @@ class likesController extends Controller
     public function destroy($id, $likeId) {
       $item = Item::findOrFail($id);
       $item->like_by()->findOrFail($likeId)->delete();
-    
       return back();
     }
 }
