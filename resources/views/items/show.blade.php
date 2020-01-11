@@ -16,7 +16,7 @@
   </div>
     <div class="discription"><p>{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span></p>
       @if(Auth::check() != true)
-        <button type="submit" disable="true">
+        <button type="submit" readonly>
           <i class="fas fa-thumbs-up"></i>
           Like {{ $item->likes_count }}
         </button>
