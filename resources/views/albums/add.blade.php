@@ -30,8 +30,9 @@
           <select name="category_id" type="text" class="cp_ipselect cp_sl01">
             <option></option>
             <option name="1" value="1">風景</option>
-            <option name="2" value="2"> 建物</option>
+            <option name="2" value="2">建物・街並み</option>
             <option name="3" value="3">人物</option> 
+            <option name="4" value="4">生き物</option> 
           </select> 
         </div>
       </div>
