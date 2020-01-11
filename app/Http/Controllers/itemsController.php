@@ -26,12 +26,15 @@ class ItemsController extends Controller
 
   public function show($id)
   {
+  
     $item = Item::find($id);
+    $like = $item->likes()->where('user_id', Auth::id())->first();
+
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;
      //eval(\psy\Sh());
-    return view("items/show",compact("item","items","comments"));
+    return view("items/show",compact("item","items","comments","like"));
   }
 
   public function destroy($id)
