@@ -36,7 +36,7 @@
       </div>
       <div class="btns">
         <input class="btns-upload-btn" type="submit" value="実行">
-        {{Form::submit("実行",["class" => "btns-upload-btn"])}}
+        {{-- {{Form::submit("実行",["class" => "btns-upload-btn"])}} --}}
       </div>
     </form>
       {{-- {{Form::close()}} --}}
