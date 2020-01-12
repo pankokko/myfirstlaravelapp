@@ -5,9 +5,11 @@
 @endsection
 @section("content")
 <div class="show-wrapper">
+  <div class="show-wrapper-toppic">
   <a href="#modal-01">
-    <img src="{{asset('/storage/temp/'.$item->path)}}" width="94%" height="600px">
+    <img class="show-image" src="{{asset('/storage/temp/'.$item->path)}}" width="94%" height="600px">
   </a>
+  </div>
   <div class="modal-wrapper" id="modal-01">
     <a href="#!" class="modal-overlay"></a>
     <div class="modal-window">

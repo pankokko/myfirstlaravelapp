@@ -6034,6 +6034,11 @@ readers do not read off random characters that represent icons */
   margin: 30px auto 0 auto;
 }
 
+.show-wrapper-toppic {
+  width: 1000px;
+  text-align: center;
+}
+
 .show-wrapper .fa-trash {
   margin-bottom: 20px;
   margin-right: 10px;
@@ -6123,6 +6128,7 @@ readers do not read off random characters that represent icons */
 
 .search-pictures-wrapper-title {
   font-size: 13px;
+  text-align: center;
   padding-top: 7px;
 }
 
@@ -6144,7 +6150,7 @@ html {
 }
 
 body {
-  font-family: "Lucida Grande", Arial, Helvetica, serif;
+  font-family: "Comic Sans MS";
   width: 1425px;
 }
 
