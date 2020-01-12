@@ -16,7 +16,7 @@ class ItemsController extends Controller
   public function __construct()
   {
       $this->middleware('auth')
-      ->except(['index','show','search']);
+      ->except(['index','show','search','new']);
   }
 
   public function index(request $request)
