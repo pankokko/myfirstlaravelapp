@@ -44,7 +44,7 @@ class AlbumsController extends Controller
         $item = Auth::user()->items->last();
         $album->items()->attach(["item_id" => $item->id ]);
         }
-        return redirect('albums/index');
+        return redirect('albums/'.$request->id.'/show');
         }
     
 
