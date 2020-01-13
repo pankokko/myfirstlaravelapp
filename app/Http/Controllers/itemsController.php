@@ -82,7 +82,7 @@ class ItemsController extends Controller
     $query = $collection->where('status',null);
   
       return view("items/search",compact("query","keyword"));
-}
+  }
 
 
 }

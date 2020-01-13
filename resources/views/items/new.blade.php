@@ -27,6 +27,7 @@
           <input id="file_input" type="file" class="image-input" name="path">
           <input id="file_input" type="hidden" class="image-input" name="status" value="">
         </label>
+        <div class="preview" ></div>
         <div class="upload-wrapper-form-content-title">
           <p class="upload-wrapper-form-content-title-text">タイトル<span class="upload-wrapper-form-content-title-span">[必須]</span></p>
           <input type="text" name="title" id="title_input" class="upload-wrapper-form-content-title-input" placeholder="最大文字数20文字" >

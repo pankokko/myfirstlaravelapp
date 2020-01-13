@@ -6784,6 +6784,11 @@ footer .pagetop-link-page-top {
   color: #666666;
 }
 
+.preview {
+  margin-left: 20px;
+  width: 200px;
+}
+
 .sign-up {
   width: 100%;
   height: 100vh;
@@ -7247,7 +7252,9 @@ footer .pagetop-link-page-top {
 }
 
 .upload-wrapper-form-content-description {
-  margin-left: 470px;
+  position: absolute;
+  top: 150;
+  right: 55;
 }
 
 .upload-wrapper-form-content-description-span {
