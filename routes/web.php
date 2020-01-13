@@ -24,6 +24,7 @@ use App\Http\Middleware\FiltereMiddleware;
 Route::post('items/{id}/show/likes', 'likesController@store');
 Route::delete('items/{id}/show/likes/{like}', 'likesController@destroy');                 
 
+
 Route::get("/", "itemsController@index")->name("/");
 Route::get("items/search","itemsController@search");
 Route::get("items/{id}/show", "itemsController@show")->name("items/{id}/show");
