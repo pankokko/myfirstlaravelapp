@@ -99,10 +99,10 @@ class AlbumsController extends Controller
     public function detail($id)
   {      
       $thisalbum = Item::find($id)->albums()->first();
-      $album = Item::find($id);
-      $pictures = $thisalbum->items->reject($album);
+      $item = Item::find($id);
+      $pictures = $thisalbum->items->reject($item);
         //eval(\Psy\sh());
-      return view("albums/detail",compact("album","pictures","thisalbum"));
+      return view("albums/detail",compact("item","pictures","thisalbum"));
     }
    }
 
