@@ -28,7 +28,7 @@
 <p>投稿した画像はトップページとトップページにある画像を選択した先の詳細ページ<br>
     そして右上のユーザー名をクリックした先のマイページで一覧表示されます。</p>
 
-<img width="1454" alt="スクリーンショット 2020-01-10 15 25 04" src="https://user-images.githubusercontent.com/56859984/72131638-368a6b80-33c0-11ea-8fde-419083ec9d2e.png">
+<img width="1386" alt="スクリーンショット 2020-01-14 16 06 22" src="https://user-images.githubusercontent.com/56859984/72321690-e4ab5380-36e7-11ea-800b-a8e6cc46670c.png">
 
 <p>18Mを超える場合はエラーが表示される</p>
 
