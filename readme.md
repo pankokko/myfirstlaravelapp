@@ -36,7 +36,6 @@
 
 <img width="1442" alt="スクリーンショット 2020-01-10 16 04 23" src="https://user-images.githubusercontent.com/56859984/72132819-40619e00-33c3-11ea-9456-74996a41b695.png">
 
-<img width="1317" alt="スクリーンショット 2020-01-10 16 11 32" src="https://user-images.githubusercontent.com/56859984/72133103-fcbb6400-33c3-11ea-9443-1ff4ee52674b.png">
 
 <p>コメントを投稿したユーザーだけがコメントを削除出来るようになっています。</p>
 
