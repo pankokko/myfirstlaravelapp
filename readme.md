@@ -12,6 +12,10 @@
 
 <h1>Usage</h1>
 
+<p>新規登録画面で新規登録いただくかログインページ内にある[Login with Git hub」からGithubのアカウントと連携しログインする事が可能です。</p>
+
+<img width="1080" alt="スクリーンショット 2020-01-14 15 55 50" src="https://user-images.githubusercontent.com/56859984/72321168-8a5dc300-36e6-11ea-987e-8dae1fc0650e.png">
+
 <p>以下のアドレスからトップページへアクセス可能です.</p>
 <p>トップページ</p>
 <p>http://3.137.8.223/</p>
