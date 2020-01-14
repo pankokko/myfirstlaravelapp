@@ -6916,6 +6916,19 @@ footer .pagetop-link-page-top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
 
+.git-hub-login {
+  height: 50px;
+}
+
+.git-hub-login-link {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  line-height: 30px;
+}
+
 .modal-wrapper {
   z-index: 999;
   position: fixed;

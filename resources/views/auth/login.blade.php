@@ -23,9 +23,12 @@
     </a>
   </div>
 
-   <div class="form-group row">
-     <label for="github" class="col-md-6 col-form-label text-md-right">
-       <a href="{{ url('login/github') }}">Login with GitHub</a>
+   <div class="form-group ">
+     <label for="github" class="git-hub-login">
+        <a href="{{ url('login/github') }}" class="git-hub-login-link">
+        <img src="https://img.icons8.com/ios/50/000000/github.png" width="30">
+         Login with GitHub
+       </a>
      </label>
   </div>
 </div>
