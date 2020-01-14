@@ -17,7 +17,8 @@ use App\Http\Middleware\FiltereMiddleware;
 
 
 
-
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallback');
 
 
 
