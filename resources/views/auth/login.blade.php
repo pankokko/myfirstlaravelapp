@@ -22,5 +22,11 @@
       <p class="login-btn-textbox">または登録</p>
     </a>
   </div>
+
+   <div class="form-group row">
+     <label for="github" class="col-md-6 col-form-label text-md-right">
+       <a href="{{ url('login/github') }}">Login with GitHub</a>
+     </label>
+  </div>
 </div>
 @endsection
