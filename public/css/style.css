@@ -6518,8 +6518,15 @@ a {
 
 .pictures-wrapper {
   width: 1000px;
-  background: blue;
   margin: 30px auto;
+}
+
+.pictures-wrapper-title {
+  margin: 0 auto;
+  font-size: 25px;
+  color: #777777;
+  width: 300px;
+  text-align: center;
 }
 
 .pictures-wrapper_photo a {

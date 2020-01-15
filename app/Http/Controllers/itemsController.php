@@ -18,7 +18,6 @@ class ItemsController extends Controller
       ->except(['index','show','search','new']);
   }
 
-
   public function index(request $request)
   {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(15);
@@ -35,6 +34,7 @@ class ItemsController extends Controller
   
     $item = Item::find($id);
     $user_like = $item->likes()->where('user_id', Auth::id())->first();
+    //eval(\Psy\Sh());
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;
@@ -80,7 +80,8 @@ class ItemsController extends Controller
     $collection = Item::where('title', 'LIKE', "%{$keyword}%")->get();
     $query = $collection->where('status',null);
   
-    return view("items/search",compact("query","keyword"));
+      return view("items/search",compact("query","keyword"));
   }
+
 
 }
