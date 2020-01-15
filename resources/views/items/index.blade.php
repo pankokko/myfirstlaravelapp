@@ -12,6 +12,7 @@
         <img class="picture-wrapper_photo-main"  src="{{ asset('/storage/temp/'.$random->path) }}" alt="logo" width="100%" height="600px">
       </a>
     </div> 
+    <p class="pictures-wrapper-title">{{$random->title}}<span class="discription-text"> taken by {{$random->user->name}}</span></p>
     @endforeach 
   @endisset
   </div>
