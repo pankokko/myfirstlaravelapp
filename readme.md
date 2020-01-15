@@ -16,6 +16,12 @@
 <p>トップページ</p>
 <p>http://3.137.8.223/</p>
 
+<h2>ログインおよび新規登録</h2>
+<p>新規登録かログインいただく事で画像の投稿が可能となります。</p>
+<p>新規登録せずともログイン画面内にある「Login with Github」からGithubのアカウントでログインする事が可能です。</p>
+
+<img width="484" alt="スクリーンショット 2020-01-14 16 00 50" src="https://user-images.githubusercontent.com/56859984/72321410-2b4c7e00-36e7-11ea-8dcb-2ee97055be22.png">
+
 <img src="https://user-images.githubusercontent.com/56859984/72130193-15278080-33bc-11ea-9303-89e788ce9ddd.png">
 
 <h2>画像投稿</h2>
