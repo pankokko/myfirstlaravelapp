@@ -66,7 +66,7 @@
           <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="40" height="40">
         </a>
         <p class="comment-wrapper-user-name"><a class="comment-wrapper-user-name-link">{{$comment->user->name}}</a></p>
-      <p class="comment-wrapper-user-text">{{$comment->comment}}</p>
+      <p class="comment-wrapper-user-text">{!! nl2br(e($comment->comment)) !!}</p>
         <div  class="comment-wrapper-user-date">
           <span class="comment-wrapper-user-date-timedate">{{$comment->created_at}}
           @if(Auth::id() == $comment->user_id)
