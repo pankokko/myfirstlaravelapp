@@ -6,9 +6,7 @@
 @section("content")
 <div class="album-nav"> 
     <div class="album-nav-wrapper">
-      <div class="album-nav-wrapper-list">
-        <p>カテゴリー毎に写真を探す </p>
-      </div>
+         <h2>カテゴリー別に写真を探す</h2>
     </div>
   </div>
 <div class="categories-wrapper">

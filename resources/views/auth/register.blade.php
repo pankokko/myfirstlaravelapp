@@ -33,7 +33,14 @@
       <a class="login-btn" href="{{route("login")}}">
        <p class="login-btn-textbox">またはログイン</p>
       </a>
-
   </div>
+    <div class="form-group ">
+        <label for="github" class="git-hub-login">
+          <a href="{{ url('login/github') }}" class="git-hub-login-link">
+          <img src="https://img.icons8.com/ios/50/000000/github.png" width="30">
+            Login with GitHub
+          </a>
+        </label>
+    </div>
 </div>
 @endsection 

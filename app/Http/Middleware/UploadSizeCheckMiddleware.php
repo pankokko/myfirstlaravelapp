@@ -27,11 +27,9 @@ class UploadSizeCheckMiddleware
     }
     
     public function return_bytes($val) {
-        
         $val = trim($val);        
         $unit = $val[strlen($val)-1];
         $_val = substr($val, 0, strlen($val)-1);        
-        
         if($unit == 'G') 
         return intval($_val) * 1024 * 1024 * 1024;
         

@@ -52,7 +52,6 @@ class LoginController extends Controller
       {  
           $socialUser = Socialite::driver('github')->stateless()->user();
           $user = User::where([ 'email' => $socialUser->getEmail() ])->first();
-          //eval(\Psy\Sh());
           if ($user) {
               Auth::login($user);
               return redirect('/');

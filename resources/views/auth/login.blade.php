@@ -22,7 +22,6 @@
       <p class="login-btn-textbox">または登録</p>
     </a>
   </div>
-
    <div class="form-group ">
      <label for="github" class="git-hub-login">
         <a href="{{ url('login/github') }}" class="git-hub-login-link">
