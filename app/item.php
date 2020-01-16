@@ -51,10 +51,4 @@ public static function userGetNullStatus($id){
     return $filtered;
 }
 
-public static $rules = array(
-  'title' => 'required',
-  'path' => 'required',
-  
-);
-
 }

@@ -6663,7 +6663,7 @@ footer .pagetop-link-page-top {
           justify-content: row;
   margin-left: 470px;
   position: absolute;
-  top: 20;
+  top: 40;
 }
 
 .upload-wrapper-form-content-title-span {
@@ -6727,7 +6727,6 @@ footer .pagetop-link-page-top {
   display: flex;
   -webkit-box-pack: row;
           justify-content: row;
-  top: 65;
 }
 
 .select-box-wrapper-select {
@@ -6793,7 +6792,26 @@ footer .pagetop-link-page-top {
 
 .preview {
   margin-left: 20px;
+  position: absolute;
+  top: 150;
+  z-index: 100;
   width: 200px;
+}
+
+.errors-title {
+  margin-left: 600px;
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  top: 70;
+}
+
+.errors-category {
+  margin-left: 600px;
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  top: 180;
 }
 
 .sign-up {
@@ -7298,7 +7316,6 @@ footer .pagetop-link-page-top {
           justify-content: row;
   margin-left: 470px;
   position: absolute;
-  top: 20;
 }
 
 .upload-wrapper-form-content-title-span {
@@ -7357,15 +7374,26 @@ footer .pagetop-link-page-top {
 .select-box-wrapper {
   margin-left: 470px;
   position: absolute;
-  top: 65;
 }
 
 .select-box-wrapper-select {
   width: 80px;
 }
 
+.upload-wrapper-form-content-text {
+  color: red;
+}
+
 .upload-wrapper-form-content-text-caution {
   color: red;
+}
+
+.errors-description {
+  margin-left: 600px;
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  top: 150;
 }
 
 .show-wrapper {

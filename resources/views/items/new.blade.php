@@ -17,10 +17,10 @@
     <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
+          @if($errors->has('path'))<p class="upload-wrapper-form-content-text-caution">{{ $errors->first('path') }}</p>@endif
         @if(session("message"))
         <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
          @else 
-        <p class="upload-wrapper-form-content-text">投稿する写真を選択してください</p>
          @endif 
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
@@ -32,6 +32,7 @@
           <p class="upload-wrapper-form-content-title-text">タイトル<span class="upload-wrapper-form-content-title-span">[必須]</span></p>
           <input type="text" name="title" id="title_input" class="upload-wrapper-form-content-title-input" placeholder="最大文字数20文字" >
         </div>
+        @if($errors->has('title'))<div class="errors-title">{{ $errors->first('title') }}</div>@endif
         <div class="select-box-wrapper">カテゴリーを入力
           <select name="category_id" type="text" class="cp_ipselect cp_sl01">
             <option></option>
@@ -41,6 +42,7 @@
             <option name="4" value="4">生き物</option> 
           </select> 
         </div>
+        @if($errors->has('category_id'))<div class="errors-category">{{ $errors->first('category_id') }}</div>@endif
       </div>
       <div class="btns">
         <input class="btns-upload-btn" type="submit" value="実行">

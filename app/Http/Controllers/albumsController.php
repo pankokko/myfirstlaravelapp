@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
+use App\Http\Requests\albumsRequest;
+use App\Http\Requests\itemsRequest;
 use App\Album;
 use App\Item;
 
@@ -31,10 +33,9 @@ class AlbumsController extends Controller
       return view("albums/add");
     }
 
-    public function store(request $request)
+    public function store(itemsRequest $request)
     {
       if(Auth::check()){
-        $this->validate($request, Item::$rules);
         $album = Album::find($request->id);
         $image =  $request->file('path');
         $filename = time() . '.' . $image->getClientOriginalName();
@@ -53,10 +54,10 @@ class AlbumsController extends Controller
       return view("albums/new");
     }
 
-   public function create(request $request)
+   public function create(albumsRequest $request)
    {
     if(Auth::check()){
-      $this->validate($request, Album::$rules);
+   
       $image =  $request->file('thumbnail');
       $filename = time() . '.' . $image->getClientOriginalName();
       $path = public_path('/storage/thumbnail/'.$filename);

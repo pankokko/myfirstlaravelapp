@@ -52,7 +52,7 @@
         justify-content:row;
         margin-left:470px;
         position:absolute;
-        top:20;
+
           &-span{
             color:red;
           }
@@ -109,12 +109,24 @@
 .select-box-wrapper{
   margin-left:470px;
   position:absolute;
-  top:65;
     &-select{
      width:80px;
    }
 }
 
-.upload-wrapper-form-content-text-caution{
+.upload-wrapper-form-content-text{
   color:red;
+  &-caution{
+    color:red;
+  }
+}
+
+
+
+.errors-description{
+  margin-left:600px;
+  position:absolute;
+  color:red;
+  font-size:14px;
+  top:150;
 }
