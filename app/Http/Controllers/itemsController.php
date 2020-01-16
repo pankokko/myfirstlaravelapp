@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use App\Http\Requests\itemsRequest;
 use App\Item;
 use App\user;
 use Intervention\Image\Facades\Image;
@@ -60,9 +61,8 @@ class ItemsController extends Controller
     }
   }
 
-  public function create(Request $request){
+  public function create(itemsRequest $request){
     if(Auth::check()){
-      $this->validate($request, Item::$rules);
       $image =  $request->file('path');
       $filename = time() . '.' . $image->getClientOriginalName();
       $thumbnail = public_path('/storage/thumbnail/'.$filename);
