@@ -8,10 +8,8 @@ use App\Http\Requests\itemsRequest;
 use App\Item;
 use App\user;
 use Intervention\Image\Facades\Image;
-// require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
 class ItemsController extends Controller
 {
-
 
   public function __construct()
   {
@@ -30,12 +28,12 @@ class ItemsController extends Controller
        }
      }
 
+
   public function show($id)
   {
   
     $item = Item::find($id);
     $user_like = $item->likes()->where('user_id', Auth::id())->first();
-    //eval(\Psy\Sh());
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;
@@ -82,6 +80,5 @@ class ItemsController extends Controller
   
       return view("items/search",compact("query","keyword"));
   }
-
 
 }

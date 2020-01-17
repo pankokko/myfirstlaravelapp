@@ -7049,6 +7049,8 @@ footer .pagetop-link-page-top {
 
 .user-container-nickname {
   margin-top: 30px;
+  float: left;
+  margin-left: 75px;
   font-weight: bold;
   font-size: 20px;
 }
@@ -7080,8 +7082,9 @@ footer .pagetop-link-page-top {
 }
 
 .user-pictures {
-  width: 1000px;
-  margin: 40px auto;
+  width: 800px;
+  margin-left: 70px;
+  float: left;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: row;
@@ -7095,6 +7098,24 @@ footer .pagetop-link-page-top {
 
 .user-pictures-wrapper-title {
   text-align: center;
+}
+
+.profile {
+  float: right;
+  margin-top: 63px;
+  border: 1px solid #f1f1f1;
+  margin-right: 130px;
+  height: 350px;
+  width: 300px;
+}
+
+.profile-wrapper-picture {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.profile-wrapper-picture-user {
+  height: 25px;
+  background-color: gray;
 }
 
 .album-nav {

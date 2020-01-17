@@ -3,6 +3,8 @@
   text-align:center;
   &-nickname{
    margin-top:30px;
+   float:left;
+   margin-left:75px;
    font-weight:bold;
    font-size:20px;
    &-text{
@@ -32,8 +34,9 @@
 }
 
 .user-pictures{
-  width:1000px;
-  margin: 40px auto;
+  width:800px;
+  margin-left:70px;
+  float:left;
   display: flex;
   justify-content: row;
   flex-wrap: wrap;
@@ -43,4 +46,21 @@
      text-align:center
     }
   }
+}
+
+.profile{
+  float:right;
+  margin-top:63px;
+  border: 1px solid #f1f1f1;
+  margin-right:130px;
+  height:350px;
+  width:300px;
+ &-wrapper-picture{
+   border-bottom:1px solid #f1f1f1;
+   &-user{
+     height:25px;
+     background-color:gray;
+   }
+ }
+
 }
