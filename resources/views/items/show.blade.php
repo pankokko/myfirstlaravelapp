@@ -63,7 +63,11 @@
       @foreach($comments as $comment)
       <div class="comment-wrapper-user">
         <a class="comment-wrapper-user-link">
+          @empty($comment->user->profilepic)
           <img src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="40" height="40">
+          @else
+          <img class="profile-wrapper-picture-image" src="{{asset('/storage/userpic/'.$comment->user->profilepic)}}"  width="40" height="40">
+          @endif
         </a>
         <p class="comment-wrapper-user-name"><a class="comment-wrapper-user-name-link">{{$comment->user->name}}</a></p>
       <p class="comment-wrapper-user-text">{!! nl2br(e($comment->comment)) !!}</p>

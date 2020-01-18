@@ -16,13 +16,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'profilepic'
     ];
 
     public function items(){
         return $this->hasmany('App\Item');
     }
-
 
     public function comments(){
         return $this->hasmany('App\Comment');
@@ -36,6 +35,12 @@ class User extends Authenticatable
       {
         return $this->hasMany('App\Like');
       }
+
+      
+
+    public static $rules = array(
+      'profilepic' => 'required',
+    );
 
     /**
      * The attributes that should be hidden for arrays.

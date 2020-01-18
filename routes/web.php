@@ -53,4 +53,6 @@ Route::post("comments/create", "commentsController@create")->name("comments/crea
 Route::post("items/{id}/show", "commentsController@create")->name("items/{id}/show");
 Route::get("/logout","HomeController@logout");
 Route::get("users/{id}/show","usersController@show")->name("user/show");
+Route::patch("users/{id}/show","usersController@edit")->name("user/edit");
+
 Route::get('/home', 'HomeController@index')->name('home');
