@@ -5,8 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Item;
-// require_once('/Users/teshigawararyou/projects/myfirstlaravelapp/vendor/composer/autoload_files.php');
-
+use Intervention\Image\Facades\Image;
 class UsersController extends Controller
 {
 
@@ -18,18 +17,29 @@ class UsersController extends Controller
 
   public function show($id)
   {
+    $albumcount = User::find(Auth::id())->albums->count();
+    $userpic = User::find(Auth::id())->profilepic;
     $item = Item::wherenull("status")->get();
     $users = $item->where("user_id",Auth::user()->id);
-   // eval(\Psy\sh());
-    return view("users/show",compact("users"));
+
+    return view("users/show",compact("users","albumcount","userpic"));
   }
 
 
-  public function edit($id)
+  public function edit(Request $request)
   {
-
-    return back();
-  }
+      $this->validate($request, User::$rules);
+      $user =  User::find(Auth::id());
+      $image = $request->file("profilepic");
+      $filename = time() . '.' . $image->getClientOriginalName();
+      $userpic = public_path('/storage/userpic/'.$filename);
+      Image::make($image)->resize(350, 220)->save($userpic);
+       //eval(\Psy\Sh());
+       User::find(Auth::id())->update(["profilepic" => basename($userpic)]);
+      return back();
+  
+    }
+   
 
 
 

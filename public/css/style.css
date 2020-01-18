@@ -7105,17 +7105,30 @@ footer .pagetop-link-page-top {
   margin-top: 63px;
   border: 1px solid #f1f1f1;
   margin-right: 130px;
-  height: 350px;
-  width: 300px;
+  height: 390px;
+  width: 330px;
 }
 
-.profile-wrapper-picture {
-  border-bottom: 1px solid #f1f1f1;
+.profile-wrapper-picture-image {
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .profile-wrapper-picture-user {
   height: 25px;
   background-color: gray;
+}
+
+.profile .user-status {
+  margin-top: 15px;
+}
+
+.profile-wrapper-picture-label-input {
+  display: none;
+}
+
+.upload-wrapper-form-profile {
+  margin-top: 10px;
 }
 
 .album-nav {
