@@ -19,7 +19,7 @@ class likesController extends Controller
 
     public function destroy($itemId, $likeId) {
       $item = Item::findOrFail($itemId);
-      $item->like_by()->findOrFail($likeId)->delete();
+      $item->like_by()->findOrFail($likeId)->delete();  //like_by()メソッドでユーザーが既にいいねをしているか確認してしていればそれを削除
       return back();
     }
 }

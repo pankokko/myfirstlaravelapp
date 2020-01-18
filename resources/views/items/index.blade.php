@@ -19,9 +19,6 @@
   <div class="top-nav"> 
     <div class="top-nav-wrapper">
       <div class="top-nav-wrapper-list">
-        <a class="top-nav-wrapper-list-link" href="#">おまかせ</a> 
-      </div>
-      <div class="top-nav-wrapper-list">
         <a class="top-nav-wrapper-list-link" href="#">新着</a> 
       </div>
     </div>

@@ -28,7 +28,7 @@
              {{ method_field('patch') }}
              <label class="profile-wrapper-picture-label" for="file_input">
                 <i class="fas fa-camera">写真を変更</i>
-                <input type="submit" class="user-submit">
+                <input type="submit" value="変更" class="user-submit">
               </label>
              <input id="file_input" name="profilepic" type="file" class="profile-wrapper-picture-label-input">
              <p class="profile-wrapper-picture-user">{{Auth::user()->name}}</p>

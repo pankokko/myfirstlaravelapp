@@ -46,7 +46,7 @@ public static function getNullStatus()
 public static function userGetNullStatus($id){
 
   $filtered = self::find($id)->user->items->reject(function($values, $key){
-    return ($values['status'] == "onlyalbum"); 
+    return ($values['status'] == "onlyalbum");   //アルバム用の画像はアルバム内以外で表示したくないため
     });
     return $filtered;
 }

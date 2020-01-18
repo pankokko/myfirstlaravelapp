@@ -74,7 +74,7 @@
         <div  class="comment-wrapper-user-date">
           <span class="comment-wrapper-user-date-timedate">{{$comment->created_at}}
           @if(Auth::id() == $comment->user_id)
-          <form action="/comments/{{$comment->id}}/destroy" class="comment-delete" method="post">
+          <form action="/comments/{{$comment->id}}/destroy" class="comment-delete" method="post" >
             @csrf
             {{ method_field('delete')}}
             <i class="fas fa-trash">

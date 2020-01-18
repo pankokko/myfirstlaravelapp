@@ -12,7 +12,7 @@ class UsersController extends Controller
   
   public function __construct()
   {
-      $this->middleware('auth');
+    $this->middleware('auth');
   }
 
   public function show($id)
@@ -31,11 +31,11 @@ class UsersController extends Controller
       $this->validate($request, User::$rules);
       $user =  User::find(Auth::id());
       $image = $request->file("profilepic");
-      $filename = time() . '.' . $image->getClientOriginalName();
+      $filename = time() . '.' . $image->getClientOriginalName(); //アップロードファイルを元々の名前と同じものに変更
       $userpic = public_path('/storage/userpic/'.$filename);
       Image::make($image)->resize(350, 220)->save($userpic);
-       //eval(\Psy\Sh());
-       User::find(Auth::id())->update(["profilepic" => basename($userpic)]);
+      User::find(Auth::id())->update(["profilepic" => basename($userpic)]);
+
       return back();
   
     }

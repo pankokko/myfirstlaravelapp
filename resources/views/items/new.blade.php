@@ -17,11 +17,11 @@
     <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
-          @if($errors->has('path'))<p class="upload-wrapper-form-content-text-caution">{{ $errors->first('path') }}</p>@endif
+      @if($errors->has('path'))<p class="upload-wrapper-form-content-text-caution">{{ $errors->first('path') }}</p>@endif
         @if(session("message"))
-        <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
-         @else 
-         @endif 
+          <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
+        @else 
+        @endif 
         <label class="upload-wrapper-form-content-label" for="file_input">
           写真を選択
           <input id="file_input" type="file" class="image-input" name="path">
