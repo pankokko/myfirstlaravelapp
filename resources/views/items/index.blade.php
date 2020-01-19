@@ -34,5 +34,5 @@
     @endforeach
     @endisset
   </div>
-  @include("components/footer")
+@include("components/footer")
 @endsection

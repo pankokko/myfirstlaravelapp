@@ -34,7 +34,7 @@ public function likes()
 
 public function like_by()
 {
-  return Like::where('user_id', Auth::id())->first();
+  return Like::where('user_id', Auth::id())->first();  //
 }
 
 public static function getNullStatus()
