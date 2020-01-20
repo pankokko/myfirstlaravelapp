@@ -45,6 +45,7 @@ class AlbumsController extends Controller
         $item = Auth::user()->items->last();
         $album->items()->attach(["item_id" => $item->id ]);
         }
+
         return redirect('albums/'.$request->id.'/show');
         }
     
@@ -79,9 +80,10 @@ class AlbumsController extends Controller
   {
     $album = Album::findOrFail($id);
     if(Auth::user()->id  == $album->user_id){ 
-    Storage::delete('public/albumpic/'.$album->thumbnail);
-    $album->delete();
+      Storage::delete('public/albumpic/'.$album->thumbnail);
+      $album->delete();
     }
+    
     return redirect('albums/index');
   }
 

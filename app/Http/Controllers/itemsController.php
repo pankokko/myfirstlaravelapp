@@ -32,7 +32,7 @@ class ItemsController extends Controller
   public function show($id)
   {
     $item = Item::find($id);
-    $user_like = $item->likes()->where('user_id', Auth::id())->first();
+    $user_like = $item->likes()->where('user_id', Auth::id())->first(); 
     $filteredNull =  Item::userGetNullStatus($id);
     $items = $filteredNull->reject($item)->take(3);
     $comments = Item::find($id)->comments;

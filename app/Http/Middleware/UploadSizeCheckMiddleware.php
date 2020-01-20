@@ -21,7 +21,7 @@ class UploadSizeCheckMiddleware
             if($post_max_size < $uploaded_size ){
               return back()->with('message' ,"ファイルサイズが大きすぎます(最大18MB)");
             }
-        }                
+        }
         return $next($request);
     }
     
