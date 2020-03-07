@@ -20,6 +20,7 @@
     </div>
   </div>
     <div class="discription"><p>{{$item->title}}<span class="discription-text"> taken by {{$item->user->name}}</span></p>
+    <div class="created-at">{{$item->created_at}}</div>
       @if(Auth::check() != true)
         <button type="submit" readonly>
           <i class="fas fa-thumbs-up"></i>

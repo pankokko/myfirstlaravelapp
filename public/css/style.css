@@ -6062,6 +6062,10 @@ readers do not read off random characters that represent icons */
   margin: 3px;
 }
 
+.created-at {
+  font-size: 13px;
+}
+
 .likes-form {
   margin-top: 8px;
 }
