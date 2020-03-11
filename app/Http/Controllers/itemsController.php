@@ -20,7 +20,7 @@ class ItemsController extends Controller
   public function index(request $request)
   {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(16);
-      //eval(\Psy\Sh());
+      
       if(!$items->isEmpty()){
         $randoms = $items->random(1);
         return view("items/index",compact("items","randoms"));
