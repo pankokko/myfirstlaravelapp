@@ -8,7 +8,7 @@
   @isset($randoms)
     @foreach($randoms as $random)
     <div class="picture-wrapper_photo">
-      <a href="items/{{$random->id}}/show">
+      <a href="/items/{{$random->id}}/show">
         <img class="picture-wrapper_photo-main"  src="{{ asset('/storage/temp/'.$random->path) }}" alt="logo" width="100%" height="600px">
       </a>
     </div> 
@@ -27,7 +27,7 @@
     @isset($items)
     @foreach ($items as $item)
       <div class="top-pictures-wrapper"> 
-        <a  class="top-pictures-wrapper-link" href="/items/{{$item->id}}/show">
+        <a  class="top-pictures-wrapper-link" href="{{ route('items.show', ['id' => $item->id]) }}">
           <img class="top-pictures-wrapper-picture" src="{{asset('/storage/thumbnail/'.$item->path)}}"width="350" height="220px">
         </a>
       </div>

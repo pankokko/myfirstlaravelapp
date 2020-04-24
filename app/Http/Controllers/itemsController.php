@@ -5,22 +5,28 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Http\Requests\itemsRequest;
+use App\Services\ItemsService;
 use App\Item;
 use App\user;
 use Intervention\Image\Facades\Image;
 class ItemsController extends Controller
 {
 
-  public function __construct()
+  protected $itemService;
+
+  public function __construct(ItemsService $itemService)
   {
       $this->middleware('auth')
       ->except(['index','show','search','new']);
+
+      $this->ItemsService = $itemService;
+
+ 
   }
 
   public function index(request $request)
   {   
       $items =  Item::getNullStatus()->sortByDesc("created_at")->take(16);
-      
       if(!$items->isEmpty()){
         $randoms = $items->random(1);
         return view("items/index",compact("items","randoms"));
@@ -48,7 +54,7 @@ class ItemsController extends Controller
       Storage::delete('public/temp/'.$item->path);
       $item->delete();
     }
-    return redirect('/');
+    return redirect('items/index');
   }
 
   public function new(Request $request){
@@ -60,8 +66,10 @@ class ItemsController extends Controller
     }
   }
 
+  
   public function create(itemsRequest $request){
     if(Auth::check()){
+    
       $image =  $request->file('path');
       $filename = time() . '.' . $image->getClientOriginalName();  //アップロードファイルを元々の名前と同じものに変更
       $thumbnail = public_path('/storage/thumbnail/'.$filename);
@@ -70,7 +78,7 @@ class ItemsController extends Controller
       Image::make($image)->resize(1000, 600)->save($path);      //詳細画面で表示される用の綺麗な画像
       Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::id() ,'category_id' => $request->category_id ,"status" => $request->status]);
      }
-    return redirect('/');
+    return redirect('items/index');
   }
 
   public function search(request $request)

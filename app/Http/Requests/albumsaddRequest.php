@@ -35,10 +35,11 @@ class albumsaddRequest extends FormRequest
 
     public function messages()
     {
-    return [
-        "albumtitle.required" => "*アルバムのタイトルは必須です。",
-        "thumbnail.required" => "*サムネイルは必須です。",
-        "description.required" => "*説明文は必須です。",
-    ];
+
+        return [
+            "albumtitle.required" => "*アルバムのタイトルは必須です。",
+            "thumbnail.required" => "*サムネイルは必須です。",
+            "description.required" => "*説明文は必須です。",
+        ];
     }
 }
