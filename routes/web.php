@@ -21,6 +21,11 @@ Route::get('login/github', 'Auth\LoginController@redirectToProvider');
 Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallback');
 
 
+Route::name('contact.')->prefix('contact')->group(function ()
+{
+    Route::get('mail', 'MailController@index')->name('index');
+});
+
 
 Route::post('items/{id}/show/likes', 'likesController@store');
 Route::delete('items/{id}/show/likes/{like}', 'likesController@destroy');
@@ -35,6 +40,7 @@ Route::prefix('items')->group(function ()
     Route::get('new','itemsController@new')->name('new');
     Route::post('new','itemsController@create');
 });
+
 
 
 Route::get('albums/index','albumsController@index')->name('albums/index');

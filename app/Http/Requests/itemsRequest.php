@@ -30,7 +30,7 @@ class itemsRequest extends FormRequest
     public function rules()
     {
         return [
-             'title'       => ['required', new Kana],
+             'title'       => 'required',
              'path'        => 'required',
              'category_id' => 'required'
         ];
