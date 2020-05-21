@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\kana;
 use Illuminate\Foundation\Http\FormRequest;
 
 class itemsRequest extends FormRequest
@@ -29,8 +30,8 @@ class itemsRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-             'path' => 'required',
+             'title'       => ['required', new Kana],
+             'path'        => 'required',
              'category_id' => 'required'
         ];
     }
@@ -38,8 +39,8 @@ class itemsRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => '*タイトルは必ず入力してください',
-            'path.required' =>  '*画像は必ず選択してください',
+            'title.required'         => '*タイトルは必ず入力してください',
+            'path.required'          =>  '*画像は必ず選択してください',
             'category_id.required'   => '*カテゴリーは必ず選択してください'
         ];
     }

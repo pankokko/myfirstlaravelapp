@@ -16,12 +16,7 @@ class AlbumTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
+ 
 
     public function test_index()
     {
@@ -49,13 +44,13 @@ class AlbumTest extends TestCase
         $response->assertStatus(200);
     }
     
-    public function test_detail()
-    {
-      $thisalbum = Item::find(1)->albums()->first();
-      $item = Item::find(1);
-      $pictures = $thisalbum->items->reject($item);
-      //eval(\Psy\Sh());
+    // public function test_detail()
+    // {
+    //   $thisalbum = Item::find(2)->albums()->first();
+    //   $item = Item::find(2);
+    //   $pictures = $thisalbum->items->reject($item);
+    //   //eval(\Psy\Sh());
 
-    }
+    // }
 
 }

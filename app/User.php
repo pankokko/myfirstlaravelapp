@@ -37,7 +37,6 @@ class User extends Authenticatable
       }
 
       
-
     public static $rules = array(
       'profilepic' => 'required',
     );

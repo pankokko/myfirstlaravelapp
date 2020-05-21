@@ -25,7 +25,7 @@ class AlbumsController extends Controller
     public function index(request $request)
     {
       $albums = Album::where("user_id", Auth::id())->get();
-        return view("albums/index" , compact("albums"));
+        return view("albums/index", compact("albums"));
     }
 
     public function add(request $request)

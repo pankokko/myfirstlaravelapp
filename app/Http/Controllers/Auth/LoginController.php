@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/items/index';
 
     /**
      * Create a new controller instance.
@@ -54,7 +54,7 @@ class LoginController extends Controller
           $user = User::where([ 'email' => $socialUser->getEmail() ])->first();
           if ($user) {
               Auth::login($user);
-              return redirect('/');
+              return redirect('/items/index');
           } else {
               $user = User::create([
                   'name' => $socialUser->getNickname(),
@@ -62,7 +62,7 @@ class LoginController extends Controller
                 
               ]);
               Auth::login($user);
-              return redirect('/');
+              return redirect('/items/index');
           }
         }
 

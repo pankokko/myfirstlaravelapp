@@ -25,7 +25,7 @@
            @endif
            <form class="upload-wrapper-form-profile" method="post" aciton="/user/edit" enctype="multipart/form-data">
              @csrf
-             {{ method_field('patch') }}
+        
              <label class="profile-wrapper-picture-label" for="file_input">
                 <i class="fas fa-camera">写真を変更</i>
                 <input type="submit" value="変更" class="user-submit">

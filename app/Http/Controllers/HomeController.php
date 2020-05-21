@@ -30,6 +30,6 @@ class HomeController extends Controller
 
     public function logout() {
         auth()->logout();
-        return redirect('/');
+        return redirect('/items/index');
    }
 }

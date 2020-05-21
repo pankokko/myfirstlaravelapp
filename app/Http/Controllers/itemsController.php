@@ -18,10 +18,7 @@ class ItemsController extends Controller
   {
       $this->middleware('auth')
       ->except(['index','show','search','new']);
-
       $this->ItemsService = $itemService;
-
- 
   }
 
   public function index(request $request)
