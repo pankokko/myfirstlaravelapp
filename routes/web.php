@@ -14,16 +14,13 @@ use App\Http\Middleware\FiltereMiddleware;
 |
 */
 
-
-
-
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
 Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallback');
 
-
 Route::name('contact.')->prefix('contact')->group(function ()
 {
-    Route::get('mail', 'MailController@index')->name('index');
+    Route::get('send', 'MailController@index')->name('index');
+    Route::post('store', 'MailController@store')->name('store');
 });
 
 

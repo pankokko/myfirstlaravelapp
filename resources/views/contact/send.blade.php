@@ -1,11 +1,12 @@
-<form method="post" action="{{ route('mail.store')}}">
+<form method="post" action="{{ route('contact.store')}}">
+  @csrf
   <p>名前</p>
   <input type="text" name="name" >
   
-  <p>emailaddress</p>
+  <p>宛先emailaddress</p>
   <input type="email" name="email" >
 
-  <p>emailaddress</p>
-  <textarea  name="email" ></textarea>
-
+  <p>テキスト</p>
+  <textarea  name="body" ></textarea>
+<button type="submit"></button>
 </form>

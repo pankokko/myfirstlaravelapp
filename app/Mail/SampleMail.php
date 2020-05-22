@@ -17,11 +17,11 @@ class SampleMail extends Mailable
      * @return void
      */
 
-    protected $content;
+    protected $contact;
 
-    public function __construct($content)
+    public function __construct($contact)
     {
-        $this->content = $content;
+        $this->contact = $contact;
     }
 
     /**
@@ -31,6 +31,6 @@ class SampleMail extends Mailable
      */
     public function build()
     {
-        return $this->from('teshigawara@aidiot.jp')->subject('テスト送信')->view('contact.mail')->with(['content' => $this->content]);
+        return $this->from('teshigawara@aidiot.jp')->subject('テスト送信')->view('contact.mail')->with(['contact' => $this->contact]);
     }
 }

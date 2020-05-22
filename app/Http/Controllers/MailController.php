@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\CotactMail;
+use App\Mail\SampleMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -14,10 +14,9 @@ class MailController extends Controller
         return view('contact.send');
     }
 
-
     public function store(Request $request)
     {
-        $contact = $request->all();
-        Mail::to($contact->email)->send(new ContactMail($contact));
+        $contact = $request;
+        Mail::to($contact->email)->send(new SampleMail($contact));
     }
 }
