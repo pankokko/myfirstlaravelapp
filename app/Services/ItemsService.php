@@ -14,6 +14,7 @@ class ItemsService
         return $items->sortByDesc("created_at")->take(16);
     }
 
+    
     public function getItemById($itemId)
     {
         $item = Item::find($itemId);
