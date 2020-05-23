@@ -38,7 +38,6 @@ class ItemsService
         if (is_null($item)) {
             return false;
         }
-
         if (Auth::id()  == $item->user_id) {
             Storage::delete('public/temp/'.$item->path);
             $item->delete();
