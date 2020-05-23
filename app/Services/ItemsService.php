@@ -13,7 +13,6 @@ class ItemsService
         $items = Item::wherenull('status')->orderBy('id')->get();
         return $items->sortByDesc("created_at")->take(16);
     }
-
     public function getItemById($itemId)
     {
         $item = Item::find($itemId);
