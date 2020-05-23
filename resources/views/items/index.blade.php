@@ -5,7 +5,6 @@
 @include("components/header")
 @section('content')
   <div class="pictures-wrapper">
-    
   @isset($randoms)
     @foreach($randoms as $random)
     <div class="picture-wrapper_photo">
