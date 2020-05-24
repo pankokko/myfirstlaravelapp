@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -9,6 +10,7 @@ use App\Services\ItemsService;
 use App\Item;
 use App\user;
 use Intervention\Image\Facades\Image;
+
 class ItemsController extends Controller
 {
 
@@ -34,7 +36,7 @@ class ItemsController extends Controller
      
     public function show($id)
     {
-        list($item, $items, $user_like, $comments) =  $this->ItemsService->getItemById($id);
+        list($item, $items, $user_like, $comments) = $this->ItemsService->getItemById($id);
         return view("items/show", compact("item", "items", "comments", "user_like"));
     }
 
@@ -43,7 +45,7 @@ class ItemsController extends Controller
         $item = $this->ItemsService->deleteItem($id);
     
         if (!is_null($item)) {
-            return redirect('items/index')->with('success', '画像を削除しました');
+            return redirect('items/index')->with('created', '画像を削除しました');
         }
     }
 
@@ -56,26 +58,21 @@ class ItemsController extends Controller
         }
     }
 
-    
-    public function create(itemsRequest $request){
-        if (Auth::check()) {
-            $image =  $request->file('path');
-            $filename = time() . '.' . $image->getClientOriginalName();  //アップロードファイルを元々の名前と同じものに変更
-            $thumbnail = public_path('/storage/thumbnail/'.$filename);
-            $path = public_path('/storage/temp/'.$filename);
-            Image::make($image)->resize(350, 220)->save($thumbnail);  //index一覧用の画像
-            Image::make($image)->resize(1000, 600)->save($path);      //詳細画面で表示される用の綺麗な画像
-            Item::create(['path' => basename($path),'title' => $request->title, 'user_id' =>  Auth::id(), 'category_id' => $request->category_id , "status" => $request->status]);
+    public function create(itemsRequest $request) {
+
+        $item = $this->ItemsService->storePicture($request);
+
+        if (is_null($item)) {
+            return redirect()->back()->with('failed', '画像の投稿に失敗しました');
         }
-        return redirect('items/index');
+        return redirect('items/index')->with('success', '写真を投稿しました');
     }
 
     public function search(request $request)
     {
-        $keyword = $request->input("keyword");
-        $collection = Item::where('title', 'LIKE', "%{$keyword}%")->get();
-        $query = $collection->where('status', null);
-      
+        $keyword                 = $request->input("keyword");
+        list($query,$collection) = $this->ItemsService->searchItems($keyword);
+        
         return view("items/search", compact("query", "keyword"));
     }
 }

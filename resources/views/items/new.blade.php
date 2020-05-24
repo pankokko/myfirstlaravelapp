@@ -17,6 +17,7 @@
     <form class="upload-wrapper-form" method="post" aciton="/items/create" enctype="multipart/form-data">
       @csrf
       <div class="upload-wrapper-form-content">
+      @include('flush.flush_message')
       @if($errors->has('path'))<p class="upload-wrapper-form-content-text-caution">{{ $errors->first('path') }}</p>@endif
         @if(session("message"))
           <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>

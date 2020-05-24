@@ -60,6 +60,11 @@
       @endif
     </div>
   <div class="comment-wrapper">
+      @if($errors->has('comment'))<p class="upload-wrapper-form-content-text-caution">{{ $errors->first('comment') }}</p>@endif
+      @if(session("message"))
+        <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
+      @else 
+      @endif 
   <h1 class="comment-wrapper-comment">コメント<span class="comment-wrapper-comment-count"> {{$comments->count()}}件</span></h1>
       @foreach($comments as $comment)
       <div class="comment-wrapper-user">

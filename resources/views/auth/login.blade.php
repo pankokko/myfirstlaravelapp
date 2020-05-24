@@ -9,11 +9,23 @@
     <div class="sign-up__wrapper-form-box">
         <input class="sign-up__wrapper-form-box__input" type="email" name="email"  placeholder="Email">
         <div class="under-bar"></div>
+        @if($errors->has('email'))
+        <p class="upload-wrapper-form-content-text-caution">{{ $errors->first('email') }}</p>
+        @endif
+        @if(session("message"))
+          <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
+        @endif
     </div>
     <div class="sign-up__wrapper-form-box">
         <input class="sign-up__wrapper-form-box__input" type="password" name="password"  placeholder="Password">
         <div class="under-bar"></div>
     </div>
+    @if ($errors->has('password'))
+        <p class="upload-wrapper-form-content-text-caution">{{$errors->first('password')}}</p>
+    @endif
+    @if(session("message"))
+        <p class="upload-wrapper-form-content-text-caution">{{session("message")}}</p>
+    @endif
     <button class="sign-up__wrapper-form-button"type="submit">
     <p class="sign-up__wrapper-form-button-registrate">ログイン</p>    
     </button>

@@ -21,9 +21,7 @@ class Comment extends Model
         return $this->belongsTo("App\Item");
     }
 
-
-
-public static $rules = array(
-    'comment' => 'required',
-  );
+    // public static $rules = array(
+    //     'comment' => 'required',
+    // );
 }
